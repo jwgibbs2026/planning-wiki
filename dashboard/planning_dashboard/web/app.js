@@ -15,7 +15,7 @@ map.addLayer(clusterLayer);
 // Drop the .geojson files into planning_dashboard/web/layers/ (served at
 // /map/static/layers/). Each layer is fetched the first time it is switched on,
 // so large files don't slow the initial map load. Missing files are skipped.
-const LAYERS_BASE = "/map/static/layers/";
+const LAYERS_BASE = "layers/";
 const OVERLAY_DEFS = [
   { file: "Ancient Woodlands.geojson", label: "Ancient Woodland", color: "#1b5e20", fill: 0.35 },
   { file: "GlosSac.geojson", label: "Special Areas of Conservation (SAC)", color: "#6a1b9a", fill: 0.30 },
@@ -113,35 +113,57 @@ function popupHtml(p) {
   </div>`;
 }
 
+// All applications are loaded once from a static file, then filtered in the
+// browser — so the map needs no running server and hosts anywhere static.
+const DATA_URL = "applications.geojson";
+let ALL_FEATURES = null;
+
+async function ensureData() {
+  if (ALL_FEATURES) return ALL_FEATURES;
+  const resp = await fetch(DATA_URL);
+  if (!resp.ok) throw new Error("HTTP " + resp.status);
+  const data = await resp.json();
+  ALL_FEATURES = data.features || [];
+  // Populate the status dropdown from the full dataset, once.
+  const statuses = new Set();
+  for (const f of ALL_FEATURES) if (f.properties && f.properties.status) statuses.add(f.properties.status);
+  populateStatusFilter(statuses);
+  return ALL_FEATURES;
+}
+
+function withinDays(receivedDate, days) {
+  if (!receivedDate) return false;
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - days);
+  // received_date is an ISO 'YYYY-MM-DD' string; lexical compare is safe.
+  return receivedDate >= cutoff.toISOString().slice(0, 10);
+}
+
 async function load() {
   const authority = document.getElementById("filter-authority").value;
   const status = document.getElementById("filter-status").value;
   const days = document.getElementById("filter-days").value;
-  const qs = new URLSearchParams();
-  if (authority) qs.set("authority", authority);
-  if (status) qs.set("status", status);
-  if (days) qs.set("days", days);
 
   const countEl = document.getElementById("count");
   countEl.textContent = "Loading…";
 
-  let data;
+  let features;
   try {
-    const resp = await fetch("/api/applications?" + qs.toString());
-    if (!resp.ok) throw new Error("HTTP " + resp.status);
-    data = await resp.json();
+    features = await ensureData();
   } catch (e) {
     countEl.textContent = "Error loading applications: " + e.message;
     return;
   }
 
+  if (authority) features = features.filter((f) => f.properties.authority === authority);
+  if (status) features = features.filter((f) => f.properties.status === status);
+  if (days) features = features.filter((f) => withinDays(f.properties.received_date, parseInt(days, 10)));
+
   clusterLayer.clearLayers();
-  const statuses = new Set();
   let plotted = 0;
 
-  for (const f of data.features) {
+  for (const f of features) {
     const p = f.properties;
-    if (p.status) statuses.add(p.status);
     const geom = f.geometry;
     if (!geom) continue;
 
@@ -167,7 +189,6 @@ async function load() {
   }
 
   countEl.textContent = `${plotted} application${plotted === 1 ? "" : "s"} shown`;
-  populateStatusFilter(statuses);
 }
 
 let statusFilterPopulated = false;
@@ -185,7 +206,7 @@ function populateStatusFilter(statuses) {
 
 async function loadAuthorities() {
   try {
-    const resp = await fetch("/api/authorities");
+    const resp = await fetch("authorities.json");
     const list = await resp.json();
     const sel = document.getElementById("filter-authority");
     list.forEach((a) => {

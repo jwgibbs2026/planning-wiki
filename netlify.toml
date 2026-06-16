@@ -1,0 +1,12 @@
+# Netlify build config for the fully static site (Guide + Wiki + Map).
+#
+# Builds the Quartz wiki, then assembles everything into ./dist, which Netlify
+# publishes. No server required.
+
+[build]
+  command = "cd wiki-src && npm ci && npx quartz plugin install && npx quartz build && cd .. && node build-static.mjs"
+  publish = "dist"
+
+[build.environment]
+  # Quartz requires Node 22+.
+  NODE_VERSION = "22"
