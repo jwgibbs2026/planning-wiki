@@ -1,0 +1,29 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Quartz Dev Server",
+      "runtimeExecutable": "powershell",
+      "runtimeArgs": [
+        "-NonInteractive",
+        "-Command",
+        "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force; Set-Location 'C:\\Users\\jwgib\\Documents\\quartz-5'; npx quartz build --serve --port 3000"
+      ],
+      "port": 3000
+    },
+    {
+      "name": "planning-dashboard",
+      "runtimeExecutable": "C:/Users/jwgib/Documents/Planning toolkit wiki/dashboard/.venv/Scripts/python.exe",
+      "runtimeArgs": [
+        "-m",
+        "uvicorn",
+        "planning_dashboard.api:app",
+        "--app-dir",
+        "C:/Users/jwgib/Documents/Planning toolkit wiki/dashboard",
+        "--port",
+        "8000"
+      ],
+      "port": 8000
+    }
+  ]
+}

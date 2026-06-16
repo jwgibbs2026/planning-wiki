@@ -1,0 +1,38 @@
+:root {
+  --bg: #f7f7f5;
+  --ink: #222;
+  --muted: #6b6b6b;
+  --accent: #2e7d32;
+  --border: #d9d9d4;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color: var(--ink); }
+/* Column layout: injected top nav bar, then the sidebar+map row fills the rest. */
+body { display: flex; flex-direction: column; }
+#content-row { display: flex; flex: 1; min-height: 0; }
+
+#sidebar {
+  width: 320px; min-width: 320px; height: 100%; overflow-y: auto;
+  background: var(--bg); border-right: 1px solid var(--border); padding: 16px 18px;
+}
+#map { flex: 1; height: 100%; }
+
+h1 { font-size: 1.2rem; margin: 0 0 4px; }
+h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 16px 0 8px; }
+.muted { color: var(--muted); font-size: 0.82rem; line-height: 1.4; }
+
+label { display: block; font-size: 0.85rem; margin-top: 12px; font-weight: 600; }
+select { width: 100%; margin-top: 4px; padding: 6px; border: 1px solid var(--border); border-radius: 6px; background: #fff; font: inherit; }
+button#apply {
+  margin-top: 14px; width: 100%; padding: 9px; border: 0; border-radius: 6px;
+  background: var(--accent); color: #fff; font-weight: 600; cursor: pointer;
+}
+button#apply:hover { filter: brightness(0.95); }
+
+#count { margin-top: 12px; }
+
+.popup h3 { margin: 0 0 4px; font-size: 0.95rem; }
+.popup .meta { font-size: 0.8rem; color: var(--muted); margin: 2px 0; }
+.popup .desc { font-size: 0.85rem; margin: 6px 0; }
+.popup a { color: var(--accent); font-weight: 600; }

@@ -1,0 +1,22 @@
+# Keep the build context small and the image clean.
+
+# Python virtualenv and caches
+dashboard/.venv/
+**/__pycache__/
+*.py[cod]
+
+# Node deps and prior wiki builds — rebuilt inside the image
+wiki-src/node_modules/
+wiki-src/public/
+wiki-src/.quartz/
+wiki-src/.quartz-cache/
+
+# Things the running site does not need
+.git/
+.obsidian/
+.llm-wiki/
+Templates/
+raw/
+*.md
+!dashboard/**/*.md
+planning-for-nature-toolkit.html

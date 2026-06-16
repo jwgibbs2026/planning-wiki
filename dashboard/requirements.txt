@@ -1,0 +1,19 @@
+# Phase 1 dependencies (the working dashboard)
+requests>=2.31
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pydantic>=2.6
+python-dotenv>=1.0
+pytest>=8.0
+
+# Used by scripts/fetch_layers.py to clip designation overlays to Gloucestershire.
+shapely>=2.0
+
+# --- Later-phase extras (NOT installed for Phase 1) ---
+# Phase 2 (document scraping):
+#   beautifulsoup4>=4.12
+#   lxml>=5.0
+#   playwright>=1.43        # only where JS rendering is required
+# Document classification (optional):
+#   anthropic>=0.25         # Claude VLM
+# (Red-line boundary extraction is out of scope — the map is points only.)

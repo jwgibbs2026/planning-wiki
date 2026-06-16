@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Planning for Nature Toolkit — Gloucestershire Wildlife Trust</title>
+  <style>
+    :root{
+      --green:#2d6a2d; --green-dark:#1f4d1f; --ink:#23311f; --muted:#5d6b56;
+      --bg:#ffffff; --cream:#f3efe4; --cream-2:#ece6d6; --border:#d9d4c4;
+      --link:#1f6b3a; --maxw:760px;
+    }
+    *{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{
+      margin:0; background:var(--bg); color:var(--ink);
+      font-family:"Source Sans Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+      font-size:17px; line-height:1.6;
+    }
+    a{color:var(--link);}
+    a:hover{text-decoration:none;}
+
+    /* Hero */
+    .guide-hero{
+      background:var(--cream); border-bottom:1px solid var(--border);
+      padding:3.5rem 1.5rem;
+    }
+    .guide-hero .titles{max-width:760px; margin:0 auto;}
+    .guide-hero .eyebrow{
+      text-transform:uppercase; letter-spacing:.14em; font-size:.72rem;
+      font-weight:700; color:var(--green); margin:0 0 .7rem;
+    }
+    .guide-hero h1{
+      font-family:"Schibsted Grotesk",Georgia,serif;
+      font-size:2.8rem; line-height:1.05; margin:0 0 .8rem; color:var(--green-dark);
+    }
+    .guide-hero .lede{font-size:1.2rem; color:var(--ink); margin:0 0 1rem; max-width:34em;}
+    .guide-hero .project{font-size:.95rem; color:var(--muted); margin:0; font-style:italic;}
+
+    /* Cross-links strip */
+    .guide-context{
+      background:var(--green); color:#fff; text-align:center;
+      padding:.7rem 1rem; font-size:.95rem;
+    }
+    .guide-context a{color:#fff; font-weight:700; text-decoration:underline;}
+    .guide-context span{opacity:.6; margin:0 .55rem;}
+
+    /* Layout */
+    .guide-layout{
+      max-width:1180px; margin:0 auto; padding:2.5rem 1.5rem 4rem;
+      display:grid; grid-template-columns:248px minmax(0,1fr); gap:3rem;
+    }
+    /* Contents */
+    .guide-toc{position:sticky; top:64px; align-self:start; max-height:calc(100vh - 84px); overflow:auto;}
+    .guide-toc h2{
+      font-size:.72rem; text-transform:uppercase; letter-spacing:.12em;
+      color:var(--muted); margin:0 0 .6rem;
+    }
+    .guide-toc ol{list-style:none; margin:0; padding:0; border-left:2px solid var(--border);}
+    .guide-toc li{margin:0;}
+    .guide-toc a{
+      display:block; padding:.28rem 0 .28rem .9rem; margin-left:-2px;
+      border-left:2px solid transparent; color:var(--muted);
+      text-decoration:none; font-size:.92rem; line-height:1.35;
+    }
+    .guide-toc a:hover{color:var(--green-dark);}
+    .guide-toc a.sub{padding-left:1.7rem; font-size:.86rem;}
+
+    /* Article */
+    .guide-article{max-width:var(--maxw);}
+    .guide-article section{
+      padding-top:1.5rem; margin-bottom:2.4rem;
+      border-top:1px solid var(--border);
+    }
+    .guide-article section:first-child{border-top:0; padding-top:0;}
+    .guide-article h2{
+      font-family:"Schibsted Grotesk",Georgia,serif;
+      font-size:1.9rem; color:var(--green-dark); line-height:1.15;
+      margin:.2rem 0 1rem;
+    }
+    .guide-article h3{
+      font-size:1.25rem; color:var(--green); margin:1.8rem 0 .6rem;
+    }
+    .guide-article h4{
+      font-size:1.02rem; color:var(--ink); margin:1.3rem 0 .4rem; font-weight:700;
+    }
+    .guide-article p{margin:0 0 1rem;}
+    .guide-article ul{margin:0 0 1rem; padding-left:1.3rem;}
+    .guide-article ul li{margin:.35rem 0;}
+    .guide-article ul li::marker{color:var(--green);}
+
+    .note{
+      background:var(--cream); border-left:4px solid var(--green);
+      padding:.8rem 1rem; border-radius:0 8px 8px 0; margin:0 0 1rem;
+      font-size:.96rem;
+    }
+
+    /* Glossary */
+    .glossary{margin:0;}
+    .glossary div{
+      padding:.7rem 0; border-bottom:1px solid var(--border);
+    }
+    .glossary dt{font-weight:700; color:var(--green-dark);}
+    .glossary dd{margin:.2rem 0 0;}
+
+    /* Plan tables */
+    .plan-table{width:100%; border-collapse:collapse; margin:.4rem 0 1.6rem; font-size:.95rem;}
+    .plan-table caption{
+      text-align:left; font-weight:700; color:var(--green-dark);
+      font-size:1.1rem; padding:.4rem 0; caption-side:top;
+    }
+    .plan-table th{
+      text-align:left; background:var(--green); color:#fff;
+      padding:.5rem .8rem; font-size:.82rem; text-transform:uppercase; letter-spacing:.05em;
+      width:50%;
+    }
+    .plan-table td{
+      padding:.45rem .8rem; border-bottom:1px solid var(--border);
+      vertical-align:top;
+    }
+    .plan-table tr:nth-child(even) td{background:var(--cream);}
+
+    footer.guide-foot{
+      max-width:1180px; margin:0 auto; padding:1.5rem; color:var(--muted);
+      font-size:.85rem; border-top:1px solid var(--border);
+    }
+
+    @media (max-width:860px){
+      .guide-layout{grid-template-columns:1fr; gap:1.5rem;}
+      .guide-toc{position:static; max-height:none; border:0;}
+      .guide-hero h1{font-size:2rem;}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="guide-hero">
+    <div class="titles">
+      <p class="eyebrow">Gloucestershire Wildlife Trust</p>
+      <h1>Planning for Nature Toolkit</h1>
+      <p class="lede">What you and your community can do to support nature locally</p>
+      <p class="project">A Neighbourhood Nature Project</p>
+    </div>
+  </header>
+
+  <div class="guide-context">
+    Start here with the plain-English guide.
+    <span>•</span> For detailed reference, open the <a href="/wiki">Planning Wiki</a>.
+    <span>•</span> To see live applications, open the <a href="/map">Planning Map</a>.
+  </div>
+
+  <div class="guide-layout">
+    <!-- Contents -->
+    <nav class="guide-toc" aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#understanding-planning">Understanding the planning system</a></li>
+        <li><a href="#getting-involved">Getting involved in planning</a></li>
+        <li><a href="#tips">Tips for responding to planning applications</a></li>
+        <li><a href="#obligations">Obligations on local/parish councils to look after nature</a></li>
+        <li><a href="#neighbourhood-planning">Neighbourhood/community level planning</a></li>
+        <li><a href="#local-planning">Local authority (district/borough) planning</a></li>
+        <li><a href="#legislation">Wildlife legislation to be aware of</a></li>
+        <li><a href="#understanding-nature">Understanding nature in your area</a></li>
+        <li><a href="#better-outcomes">Pushing for better outcomes for nature in developments</a></li>
+        <li><a href="#turning-into-action">Turning planning into action in your community</a></li>
+        <li><a href="#annex-a">Annex A — NDP policy ideas to support nature</a></li>
+        <li><a href="#annex-b">Annex B — Glossary</a></li>
+        <li><a href="#appendix-c">Appendix C — Neighbourhood plans</a></li>
+      </ol>
+    </nav>
+
+    <!-- Article -->
+    <article class="guide-article">
+
+      <section id="introduction">
+        <h2>Introduction</h2>
+        <p>This kit is designed to help you understand the planning system and how you can get involved with it, whether you are an individual, part of a community group, or local Councillor. We all have a part to play in ensuring that nature is prioritised and protected within the planning system.</p>
+        <p>This document brings together information on a range of topics within planning, such as what plans look like, how communities can get involved in planning, and the best ways to protect and support nature’s recovery in the process.</p>
+        <p>At Gloucestershire Wildlife Trust, our ambition is to preserve, enhance and connect wildlife within Gloucestershire. We care deeply about allowing nature to thrive. A great way to achieve this goal is by getting involved in the planning system, and using your voice to advocate for nature and wildlife to be protected in your local area.</p>
+      </section>
+
+      <section id="understanding-planning">
+        <h2>Understanding the planning system</h2>
+        <h3>What is the planning system and how does it work?</h3>
+        <p>The planning system oversees the use and development of all land in the UK. The system ensures that the right development happens in the right place at the right time, benefitting the community and economy local to the area.</p>
+        <p>The planning system is used to identify where development is needed and what areas should be protected for wildlife. Those involved in the decision-making process include local authorities, Councillors and planning officers.</p>
+        <p>On a national level, the Secretary of State for Housing, Communities and Local Government, and the Planning Inspectorate, are decision-makers. The Planning Inspectorate deals with planning appeals, national infrastructure planning applications, examinations of Local Plans and other planning-related and specialist casework in England.</p>
+        <p>For Nationally Significant Infrastructure Projects, such as new roads, railway lines or water resources, the relevant Secretary of State (the senior minister that oversees the relevant government department) is responsible for decision-making after receiving a recommendation from the Planning Inspectorate.</p>
+        <p>The planning system includes plans such as:</p>
+        <ul>
+          <li><strong>Local Plans</strong> – these are written by Local Planning Authorities (LPAs), who are typically District Councils. Local Plans set out the goals and framework for development, protected areas and locations in the area.</li>
+          <li><strong>Neighbourhood Development Plans</strong> – these are prepared by Parish or Town Councils. These plans allow communities to set out the infrastructure and buildings needed in their area.</li>
+        </ul>
+        <p>Local communities can have their say in the planning system through local authorities and consultations.</p>
+      </section>
+
+      <section id="getting-involved">
+        <h2>Getting involved in planning</h2>
+        <p>On a local level, you can speak to your parish council about your Neighbourhood Development Plan. You can check if your parish has one, and if so, whether it accurately supports and represents nature. If there are areas of improvement for nature, provide feedback on the ways in which you feel nature can be better represented.</p>
+        <p>A great time to provide feedback is when your parish or town council are consulting on their Neighbourhood Development Plan. This could include highlighting any areas in your area that you think are important for nature, especially those that not everyone would be aware of.</p>
+        <p>At a wider scale, you can read your district or borough council’s Local Plan chapters on environment and biodiversity. You can look at the suggested policies to protect and enhance nature, and send in your feedback when the council runs consultations on this.</p>
+        <h3>How you can support nature in your community</h3>
+        <p>One of the best ways to influence decisions made about nature in your area is getting involved in the planning process. There are various different ways that you can achieve this. At a local level, you can engage with your parish council and tell them what you would like to see happening for nature in your parish. At a district/borough level, you can send comments in to your Local Plan when it is being consulted on.</p>
+        <p>If there is a more large-scale infrastructure project in your area, like a big new road or renewable energy scheme, you can also send your comments to that proposal. You could also reach out to your parish council to see if they are sending a response.</p>
+        <p>We’ll look more at the different ways of getting involved below.</p>
+      </section>
+
+      <section id="tips">
+        <h2>Tips for responding to planning applications</h2>
+        <p>By the time that a planning application has been submitted, it is highly unlikely that the proposal can be significantly altered. At GWT, we engage developers at a design stage before applications are submitted, especially for larger developments, to ensure that biodiversity is protected.</p>
+        <p>If you are concerned about a planning application’s impact on wildlife, there are a few things that you can do:</p>
+        <ul>
+          <li>Base your comments on biodiversity policies in the Government’s guidance to local authorities, the National Planning &amp; Policy Framework (NPPF)</li>
+          <li>Refer to biodiversity policies in your area’s Local Plan and Neighbourhood Development Plan.</li>
+          <li>Make sure that the application is compliant with wildlife legislation. We will cover this legislation on a further page.</li>
+          <li>Check that the development has utilised the Gloucestershire Centre for Environmental Records, which we cover on a further page.</li>
+          <li>Don’t focus on common species, such as rabbits, foxes, and deer. Unfortunately, more common species won’t be grounds for a refusal from the local authority.</li>
+          <li>Send a copy of your response to your local district Councillor and parish council so that they are aware of your views.</li>
+          <li>Report species sightings to the Gloucestershire Centre for Environmental Records. This is extremely important if you have evidence on a proposed development site.</li>
+        </ul>
+        <p>Sadly, wildlife issues rarely stop a planning application, but they can be changed as a result. Developers must carry out surveys to support their applications, but some local authorities may not know when to ask for these. One way that you can help with this is by ensuring that any wildlife issues that you are aware of are properly surveyed.</p>
+      </section>
+
+      <section id="obligations">
+        <h2>Obligations on local/parish councils to look after nature</h2>
+        <p>Your local authority has a duty to look after nature.</p>
+        <h3>Natural Environment &amp; Rural Communities Act 2006</h3>
+        <p>This Act enabled the creation of Natural England as an agency, which started in October 2006. The importance of biodiversity conservation was given a legal basis from this Act, requiring government departments to consider biodiversity in their activities. Local government was also given a statutory duty to further the conservation and enhancement of SSSIs, both operationally and in decision-making.</p>
+        <h3>Environment Act 2021</h3>
+        <p>The 2021 Environment Act has become the UK’s new framework for environmental protection.</p>
+        <p>This Act set clear statutory targets for nature’s recovery in four priority areas:</p>
+        <ul>
+          <li>Air quality</li>
+          <li>Biodiversity</li>
+          <li>Water</li>
+          <li>Waste</li>
+        </ul>
+        <p>The Act also introduced the target of halting the decline in nature by 2030, a target now reflected in the United Nations Paris Agreement, as well as in the strategy for The Wildlife Trusts.</p>
+        <p>The Environment Act 2021 also strengthened the “biodiversity duty”. This means that local authorities must:</p>
+        <ul>
+          <li>Consider what they can do to both conserve and enhance biodiversity.</li>
+          <li>Agree policies and specific objectives based on those considerations.</li>
+          <li>Act to deliver policies and achieve objectives.</li>
+        </ul>
+        <p>Not acting on this can signal failure to meet the duty and comply with the legislation.</p>
+        <p>Another key feature of the Act is the introduction of the Office for Environmental Protections (OEP), which the government promised would be a “world leading environmental watchdog”. The OEP is meant to make sure the government and other public bodies are accountable for what they do or don’t do to protect the environment, and help communities complain if environmental laws aren’t followed.</p>
+      </section>
+
+      <section id="neighbourhood-planning">
+        <h2>Neighbourhood/community level planning</h2>
+        <p>Parish councils must produce a Neighbourhood Development Plan (NDP) which can include good policies for nature (see more about this below). Gloucestershire Wildlife Trust can support in developing a Plan, and we have included suggestions for key policies further down.</p>
+        <p>Biodiversity Action Plans are also another plan that parish councils can develop. These plans allow these authorities to develop a plan of how they will help with nature’s recovery. However, Biodiversity Action Plans are not a statutory document, but rather an effective template to ensure that councils are delivering against a biodiversity duty.</p>
+        <p>Parish councils can also feed into Local Plan consultations, especially as they will have a more in depth understanding of their specific local area.</p>
+        <p>Councils are also in a good position to create community groups to bring together people who want to work on projects that support nature in their local area.</p>
+
+        <h3>Neighbourhood Development Plans</h3>
+        <h4>What are neighbourhood development plans?</h4>
+        <p>A Neighbourhood Development Plan (NDP) is a document that sets out planning policies for a local area. Neighbourhood planning was introduced in the Localism Act in 2011. NDPs will be developed by Parish or Town Councils which set out planning policies for the local area. This can then determine planning applications in that area. The policies set out in the NDP must be in line with the Local Plan that covers the area. However, NDPs can also influence Local Plans, being used as part of the evidence base or in consultations when deciding on areas of priority for development.</p>
+        <h4>How can neighbourhood development plans support nature?</h4>
+        <p>Neighbourhood Development Plans can protect local green space, create more well-designed areas, and develop housing that meets local needs. They allow residents, communities, and businesses to shape their local area by developing planning policies that benefit their local communities.</p>
+        <p>Planning proposals can be influenced by NDPs. There is no guarantee that a proposal will be refused, and Plans cannot be used to block development wholly, but planning proposals will be considered with both the Neighbourhood Development Plan and Local Plan in mind.</p>
+        <p>NDPs must relate to the development and use of land within the area. They also must meet “basic conditions”, which ensure that the policies contributing to sustainable development are in general conformity with the Local Planning Authority and National Planning Policy Framework.</p>
+        <h4>How can you fund NDPs?</h4>
+        <p>Parish councils can apply for grant funding of up to £10,000 to support them in neighbourhood planning. You can find out more <a href="https://neighbourhoodplanning.org/about/grant-funding/" target="_blank" rel="noopener">here</a>.</p>
+        <p>Parish/Town Councils can also receive financial benefits from the Community Infrastructure Levy once an NDP is in place. Community Infrastructure Levy could be used to fund local wildlife projects or communities.</p>
+        <h4>My parish has created a Neighbourhood Development Plan. How do we turn these policies into action in our community?</h4>
+        <p>Actionable measures are key to ensuring your community benefits from green spaces, biodiversity, and sustainable development. Here’s how you can make a real impact:</p>
+        <h4>Secure Green Spaces in the Planning System</h4>
+        <ul>
+          <li>Ensure our NDP designates specific areas as Local Green Spaces (LGS) to protect them from development.</li>
+          <li>Work with our parish and district councils to ensure these allocations are respected in planning decisions.</li>
+          <li>Engage with landowners to encourage their support in protecting and enhancing designated green spaces.</li>
+        </ul>
+        <h4>Improve and Maintain Green Spaces</h4>
+        <ul>
+          <li>Develop a community-led management plan to enhance these areas for nature and people, setting actionable and achievable goals at a community level.</li>
+          <li>Encourage public access where appropriate.</li>
+        </ul>
+        <h4>Engage the Community in Protecting and Enhancing Nature</h4>
+        <ul>
+          <li>Form community groups to oversee maintenance, habitat improvements, and community events.</li>
+          <li>Organize volunteer days for activities such as tree planting, litter picking, and wildlife monitoring. Training could also be provided for specific tasks.</li>
+          <li>Involve local schools and youth groups in nature-based projects and educational activities.</li>
+          <li>Share updates with the community via newsletters, social media, and parish meetings.</li>
+          <li>Organize public events such as guided nature walks, tree-planting days, and seasonal festivals, to widen outreach</li>
+        </ul>
+        <h4>Work with Developers to Ensure Nature-Friendly Growth</h4>
+        <ul>
+          <li>Push for new developments to include wildlife-friendly features like hedgehog highways, bird and bat boxes.</li>
+          <li>Encourage developers to contribute to the improvement of existing green spaces as part of their planning obligations.</li>
+        </ul>
+        <h4>Secure Funding and Long-Term Management</h4>
+        <ul>
+          <li>Apply for grants from local authorities, conservation charities, and government schemes to support nature projects.</li>
+          <li>Partner with organizations like Wildlife Trusts, Natural England, and community foundations for expertise and resources.</li>
+          <li>Set up community fundraising initiatives to support ongoing maintenance and enhancement of our green spaces.</li>
+          <li>Keep track of biodiversity improvements through wildlife surveys and habitat monitoring.</li>
+        </ul>
+        <p>Through collaboration, community involvement, and proactive planning, you can ensure these spaces remain protected for future generations.</p>
+      </section>
+
+      <section id="local-planning">
+        <h2>Local authority (district/borough) planning</h2>
+        <h3>Local plans</h3>
+        <p>Local Plans are documents made by District, Borough or Unitary Authority Councils which present a planning strategy for the area that they cover. Local Plans should include policies that protect the environment. This is in addition to national policies, such as the minimum 10% biodiversity net gain in planning developments.</p>
+        <p>Local Plans must align with the government’s National Planning Policy Framework (NPPF). Any planning applications or development proposals in the area covered by the Local Plan must comply with the policies set out.</p>
+        <p>Local Plans are based on relevant evidence and data about the area. These will be made up of different documents, such as a Sustainability Appraisal and an Equality Impact Assessment. Evidence of wildlife habitats, such as those from the Gloucestershire Centre for Environmental Records (GCER), can also be used to support policies in the Local Plan.</p>
+        <p>Example policies that could be included in order to protect nature include:</p>
+        <ul>
+          <li>An increase in the minimum 10% Biodiversity Net Gain (BNG) on developments. The need for this has to be backed up by evidence and a viability assessment, but that is not a reason that local authorities should be put off trying.</li>
+          <li>Developments requiring a good provision of quality green space and green infrastructure.</li>
+          <li>Applications to accreditations that promote sustainable development such as Building with Nature.</li>
+        </ul>
+        <h3>How can I get involved in the local plan process?</h3>
+        <p>The preparation and regulation process for Local Plans are:</p>
+        <p><strong>Evidence gathering and early-stage consultations</strong> – The Local Planning Authority will consult on initial issues and options that will define the draft plan. The public are consulted and can give their views on issues that are important to them.</p>
+        <p><strong>Pre-submission publication stage</strong> – There is a statutory consultation period of 6 weeks before the draft is submitted for examination. This is an opportunity to make changes to the draft after the consultation. LPAs may carry out further consultation if this is necessary.</p>
+        <p><strong>Submission of document and independent examination</strong> – The final documents are submitted to the Government and independent Inspector, who will consider all evidence made at each stage of the Local Plan consultation process.</p>
+        <p><strong>Inspector’s report and adoption</strong> – The Plan will be examined to assess whether it is sound. Sound means that the Plan is positively prepared, justified, effective, and consistent with national policy. Recommendations are then published in a report, which the LPA doesn’t necessarily have to implement, but the Plan can only be adopted if it has been recommended for adoption in the report.</p>
+      </section>
+
+      <section id="legislation">
+        <h2>Wildlife legislation to be aware of</h2>
+        <p>What laws are in place that help to protect nature and how do I know that they are being followed?</p>
+        <h3>Wildlife and Countryside Act 1981</h3>
+        <p>The 1981 Wildlife and Countryside Act is the primary piece of legislation that protects wildlife in Britain. This Act covers four key areas:</p>
+        <ul>
+          <li>Wildlife protection, including protection of wild birds, their eggs and nests, protection of other animals and protection of plants</li>
+          <li>Nature conservation, countryside and national parks – this introduced protection of Sites of Special Scientific Interest (SSSIs)</li>
+          <li>Public Rights of Way</li>
+          <li>Miscellaneous provisions</li>
+        </ul>
+        <p>Breaching the rules of the Wildlife and Countryside Act would include any deliberate or inadvertent attempt to kill, disperse, capture, injure, harm or disturb considered endangered species, as well as any form of interference on their carcasses, eggs, habitats, nests or roosts.</p>
+        <p>The Act is enforced by the UK government. It prevents developers and anyone else posing any potential harm to present listed wild plants and animals.</p>
+        <h3>The Conservation of Habitats and Species Regulations 2010 (as amended)</h3>
+        <h3>The Countryside and Rights of Way Act (Crow Act 2000 (as amended)</h3>
+        <h3>The Environment Act 2021</h3>
+        <p>The 2021 Environment Act has become the UK’s new framework for environmental protection. The Act set clear statutory targets for nature’s recovery under 4 priority areas:</p>
+        <ul>
+          <li>Air quality</li>
+          <li>Biodiversity</li>
+          <li>Water</li>
+          <li>Waste</li>
+        </ul>
+        <p>The Act also introduced the target of halting the decline of nature by 2030, reflecting the United Nations Paris Agreement.</p>
+        <p>The 2021 Environment Act also strengthened the “biodiversity duty”. This means that local authorities must:</p>
+        <ul>
+          <li>Consider what they can do to both conserve and enhance biodiversity.</li>
+          <li>Agree policies and specific objectives based on those considerations.</li>
+          <li>Act to deliver policies and achieve objectives.</li>
+        </ul>
+        <p>Another key feature of the Act is the introduction of the Office for Environmental Protections (OEP), which the government promised would be a “world leading environmental watchdog”. The OEP is meant to make sure that the government and other public bodies are accountable for what they do or don’t do to protect the environment, and help communities to report if environmental laws aren’t followed.</p>
+        <h3>The Levelling up and Regeneration Act 2023</h3>
+        <p>The Levelling Up and Regeneration Act introduced a number of measures to support the development of higher-quality homes being built faster. The Act allows local planning authorities to hold housing developers to account with regards to the speed of development and how long they can have planning permission.</p>
+        <h3>Hedgerows Regulation 1997</h3>
+        <p>This regulation falls under local authorities. It is intended to protect important hedgerows from removal. Landowners and managers of land must request permission from their local authority before removing a hedgerow, and permission is not granted if the hedgerow supports a diverse range of wildlife or protected species.</p>
+      </section>
+
+      <section id="understanding-nature">
+        <h2>Understanding nature in your area</h2>
+        <h3>How do I know which areas are most important for nature in my community?</h3>
+        <h4>The Nature Recovery Network</h4>
+        <p>The Nature Recovery network is a national network of wildlife-rich areas. The country is mapped with priority areas highlighted. The process of mapping uses local nature recovery strategies and evidence bases. The Nature Recovery network maps land where there is already wildlife rich areas, or prioritised areas for wildlife.</p>
+        <p>The goal of the Nature Recovery Network is to help in the government’s goal to protect and enhance 30% of our land for wildlife by 2030. Any type of land can contribute to the Nature Recovery Network, as wildlife knows no boundaries!</p>
+        <p>The Nature Recovery Network can also ensure that NDPs are developed with nature at their heart, by recognising significant areas of interest for wildlife in specific areas.</p>
+        <h3>How can I make sure that the wildlife in my community is recorded?</h3>
+        <h4>Gathering evidence</h4>
+        <p>Gathering evidence is an important part of the process for developing Local Plans and Neighbourhood Development Plans. Plans need to be based on sound evidence in order to be approved.</p>
+        <p>If you are feeding into the development of a Plan, whether that is by consultation or as a Councillor, it is important to gather as much local knowledge about wildlife in your area.</p>
+        <p>The Gloucestershire Centre for Environmental Records (GCER) is a central source of information for wildlife in Gloucestershire. Local Environmental Record Centres, such as GCER, exist to encourage, collate, curate and share important information about wildlife sightings and habitats.</p>
+        <p>This information is generated by experts in their field, national recording schemes, professional ecologists and non-governmental organisations (NGOs) such as Gloucestershire Wildlife Trust.</p>
+        <p>You can request data from GCER such as distribution maps, landscape-level maps of habitats, Nature Improvement Areas and Strategic Nature Areas.</p>
+      </section>
+
+      <section id="better-outcomes">
+        <h2>Pushing for better outcomes for nature in developments</h2>
+        <h3>Promoting high-quality Green Infrastructure</h3>
+        <p>Green Infrastructure (GI) is a network of multi-functional green space and features, both urban and rural, which delivers quality of life and environmental benefits for communities. This can include:</p>
+        <ul>
+          <li>A network of natural spaces designed to deliver benefits for people and the planet.</li>
+          <li>Well-connected green routes such as footpaths and cycle lanes, that promote active, sustainable travel.</li>
+          <li>Good quality parks, open spaces, playing fields, woodlands, street trees, allotments, green roofs and walls.</li>
+          <li>Sustainable urban drainage systems (Suds) such as rain gardens or permeable paving.</li>
+          <li>A network of integrated spaces and features which are multi-functional and provide multiple benefits simultaneously.</li>
+          <li>More urban nature.</li>
+        </ul>
+        <p>Green Infrastructure brings a multitude of benefits to both people and the planet. It aids in nature’s recovery by increasing green spaces, it provides nature-based solutions to combatting climate change. A lot of GI can reduce water runoff, which in turn can help in reducing flooding. Green Infrastructure also improves people’s physical and mental health, by bringing nature closer to more people in urban environments as well as promoting more physically healthy options such as locally grown food or active travel options.</p>
+        <h3>Green Infrastructure frameworks and how they can help nature</h3>
+        <p>There are two key Green Infrastructure frameworks – Natural England’s framework and Building with Nature.</p>
+        <h4>Building with Nature</h4>
+        <p>Initially developed by a partnership between GWT and the University of West England, Building with Nature is the UK’s first set of standards for creating green infrastructure. Building with Nature incorporates 12 standards that developers can use to ensure that they are creating high quality, nature friendly infrastructure at every part of the development process.</p>
+        <p>Building with Nature has framework for good practice through every stage of development, and recognises work that goes above the basic standards of sustainable development through the Building with Nature accredited awards. These awards recognise planning, policy, and infrastructure that are close to nature, support nature’s recovery, are resilient to climate change, and deliver effective ecosystem management.</p>
+        <p>The Building with Nature Awards provide independent recognition of good development that goes beyond standard practice to deliver space that is close to nature, delivers cost effective ecosystem services, supports nature’s recovery, and are adapted for and resilient to climate change.</p>
+        <p>Building with Nature is no longer managed by GWT, but it is still recommended as a part of sustainable development. You can learn more about Building with Nature <a href="https://www.buildingwithnature.org.uk/" target="_blank" rel="noopener">here</a>.</p>
+        <h4>Natural England Green Infrastructure Framework</h4>
+        <p>Natural England has Green Infrastructure principles that underpin their framework. These 15 principles are based on the benefits of GI (why), the description (what), and the process (how).</p>
+        <p>You can find out more about these standards <a href="https://designatedsites.naturalengland.org.uk/GreenInfrastructure/Principles/GIPrinciples.aspx" target="_blank" rel="noopener">here</a>.</p>
+      </section>
+
+      <section id="turning-into-action">
+        <h2>Turning planning into action in your community</h2>
+        <p>To have a more in-depth look at applying community action, read our Community Action toolkit.</p>
+        <p>One way that you can encourage your parish or town to take action on nature is by encouraging them to write a Biodiversity Action Plan (BAP), sometimes also known as a Local Nature Action Plan (LNAP). Biodiversity Action Plans are not planning documents, but support local councils to consider what they can do to support biodiversity in their area.</p>
+        <p>BAPs should include consultations with the community. These consultations can help to develop further actions that your community can take to support nature.</p>
+        <p>One of these actions could be creating local biodiversity groups. At GWT, we have supported in the development of these groups. For example, as a result of the council developing a BAP, Nailsworth Wildlife Group brought together a group of like-minded people. This group now works on how they can have a positive impact on wildlife whilst supporting the council’s BAP.</p>
+        <p>Encouraging people to take action at home is also a great step towards encouraging community action on nature. On the GWT website you can find a number of actions with instructions. These range from garden activities, such as creating a hedgehog hole or a wildflower patch, to using less plastic or being an eco-friendly pet owner.</p>
+        <p>In January 2024, Cheltenham, Gloucester, and Tewkesbury Council opened their Strategic and Local Plan to initial consultation. The consultation ran for 8 weeks. During this time, Gloucestershire Wildlife Trust mobilised the community to take action by providing feedback to the consultation. As a result, over 500 people supported a call for the councils to declare nature emergencies. In March 2024, Cheltenham Borough Council declared a nature emergency, making Gloucester City Council the last district council to declare a nature emergency.</p>
+      </section>
+
+      <section id="annex-a">
+        <h2>Annex A</h2>
+        <h3>NDP policy ideas to support nature</h3>
+        <ul>
+          <li>All developments should contribute to nature’s recovery in Gloucestershire by protecting and strengthening the Nature Recovery Network, which forms part of the Local Nature Recovery Strategy.</li>
+          <li>All developments must deliver ambitious biodiversity net gain, above the 10% statutory minimum.</li>
+          <li>All major developments should deliver high quality Green Infrastructure, preferably achieving the Building with Nature standards or a similar framework.</li>
+          <li>Developments should ensure protection of internationally, nationally and Local Designated sites, including Local Wildlife Sites.</li>
+          <li>All developments should include a Sustainable Urban Drainage (Suds) scheme, and high-quality natural flood protection, reducing flood risk and creating wildlife habitats.</li>
+          <li>Professional monitoring of biodiversity enhancements must be carried out to demonstrate that they have been achieved should be a condition of all planning applications.</li>
+        </ul>
+      </section>
+
+      <section id="annex-b">
+        <h2>Annex B</h2>
+        <h3>Glossary</h3>
+        <dl class="glossary">
+          <div><dt>Biodiversity</dt><dd>The variability and variety of life on Earth.</dd></div>
+          <div><dt>Biodiversity Action Plan</dt><dd>A plan for parish councils to protect and restore the local natural environment.</dd></div>
+          <div><dt>Biodiversity Net Gain</dt><dd>An approach to development, land and marine management which leaves biodiversity in a measurably better state than before the development took place. Currently, developments must show a 10% minimum BNG.</dd></div>
+          <div><dt>Building with Nature</dt><dd>A set of Green Infrastructure standards that define what good Green Infrastructure looks like. Also an accreditation/award for good developments.</dd></div>
+          <div><dt>Councillor</dt><dd>An elected representative of a local area – a parish, district or county.</dd></div>
+          <div><dt>County council</dt><dd>A council that covers services across the whole of a county, such as education, transport, and social services.</dd></div>
+          <div><dt>District council</dt><dd>A council that covers a smaller area than county councils. Responsible for services such as housing, planning applications, and rubbish collection.</dd></div>
+          <div><dt>ENGO</dt><dd>Environmental non-governmental organisation, such as Gloucestershire Wildlife Trust.</dd></div>
+          <div><dt>Green Infrastructure</dt><dd>A network of multi-functional green space, and other green features, which delivery both quality of life and environmental benefits for the community.</dd></div>
+          <div><dt>Local authority</dt><dd>Refers to any local government – county, district or parish.</dd></div>
+          <div><dt>Local Plan</dt><dd>A plan written by district councils which guides decisions on future development proposals and addresses the needs and opportunities of the local area. Includes housing, environment, and employment.</dd></div>
+          <div><dt>Local planning authority</dt><dd>The planning department of a district council.</dd></div>
+          <div><dt>Major development</dt><dd>Any application that involves residential development of 10 or more dwellings, residential development on a site area of 0,5 ha or more, development of floorspace of 1,000 sq. m or more, or development on sites over 1 ha.</dd></div>
+          <div><dt>Natural England</dt><dd>A non-departmental public body, sponsored by the Department for Environment, Food and Rural Affairs, which helps protect and restore the natural environment.</dd></div>
+          <div><dt>Nature Recovery Network</dt><dd>A national network map, which helps to restore, enhance, and connect the natural environment to create more wildlife-rich places.</dd></div>
+          <div><dt>Neighbourhood Development Plan</dt><dd>A legal and statutory planning document which is used to assess planning applications and guide some infrastructure provision at a parish level.</dd></div>
+          <div><dt>Parish council</dt><dd>A council that operates at a level below district councils. Includes elected councils and supports a number of local issues, such as allotments, grants to help local organisations, and community centres.</dd></div>
+        </dl>
+      </section>
+
+      <section id="appendix-c">
+        <h2>Appendix C</h2>
+        <h3>Neighbourhood plans</h3>
+
+        <h4>Gloucester City</h4>
+        <p>There are no formal Neighbourhood plans within the City’s boundaries. However, influence could be applied at the Local Plan Level.</p>
+
+        <table class="plan-table">
+          <caption>Cheltenham Town</caption>
+          <thead><tr><th scope="col">Made Plan</th><th scope="col">In development</th></tr></thead>
+          <tbody>
+            <tr><td><a href="https://www.leckhamptonwithwardenhill-pc.gov.uk/neighbourhood-planning" target="_blank" rel="noopener">Leck Hampton with Warden Hill</a></td><td></td></tr>
+          </tbody>
+        </table>
+
+        <table class="plan-table">
+          <caption>Forest of Dean District</caption>
+          <thead><tr><th scope="col">Made Plan</th><th scope="col">In development</th></tr></thead>
+          <tbody>
+            <tr><td><a href="https://www.fdean.gov.uk/media/tvtjz2dj/alvington-ndp-adopted-version-_-6-may-2021.pdf" target="_blank" rel="noopener">Alvington</a></td><td><a href="https://www.fdean.gov.uk/planning-and-building/planning-policy/neighbourhood-planning/neighbourhood-plans-in-development/" target="_blank" rel="noopener">Newent</a> – Area only designated.</td></tr>
+            <tr><td><a href="https://www.fdean.gov.uk/media/iral2ly3/berry-hill-christchurch-and-edge-end-neighbourhood-plan.pdf" target="_blank" rel="noopener">Berry Hill, Christchurch and Edge End</a></td><td></td></tr>
+            <tr><td><a href="https://www.fdean.gov.uk/media/rxme431c/coleford-neighbourhood-development-plan.pdf" target="_blank" rel="noopener">Coleford</a></td><td></td></tr>
+            <tr><td><a href="https://www.fdean.gov.uk/media/c03bilwx/dymock-neighbourhood-development-plan-referendum-version-2024.pdf" target="_blank" rel="noopener">Dymock</a></td><td></td></tr>
+            <tr><td><a href="https://www.fdean.gov.uk/media/yqckt412/forest-edge-south-neighbourhood-development-p_anna-welsh-1.pdf" target="_blank" rel="noopener">Forest Edge South</a></td><td></td></tr>
+            <tr><td><a href="https://www.fdean.gov.uk/media/3zdbt4kh/huntley-neighbourhood-development-plan-adopted-version-v2.pdf" target="_blank" rel="noopener">Huntley</a></td><td></td></tr>
+            <tr><td><a href="https://www.fdean.gov.uk/media/xjhlnbtk/longhope-neighbourhood-development-plan.pdf" target="_blank" rel="noopener">Longhope</a></td><td></td></tr>
+            <tr><td><a href="https://www.fdean.gov.uk/media/dofbjp4t/lydney-neighbourhood-development-plan.pdf" target="_blank" rel="noopener">Lydney</a></td><td></td></tr>
+            <tr><td><a href="https://www.fdean.gov.uk/media/zv0hydy5/mitcheldean-neighbourhood-development-plan.pdf" target="_blank" rel="noopener">Mitcheldean</a></td><td></td></tr>
+          </tbody>
+        </table>
+
+        <table class="plan-table">
+          <caption>Tewkesbury District</caption>
+          <thead><tr><th scope="col">Made Plan</th><th scope="col">In development</th></tr></thead>
+          <tbody>
+            <tr><td><a href="https://tewkesbury.gov.uk/services/planning/planning-policy/neighbourhood-planning/neighbourhood-planning-in-tewkesbury/alderton/" target="_blank" rel="noopener">Alderton</a></td><td><a href="https://tewkesbury.gov.uk/services/planning/planning-policy/neighbourhood-planning/neighbourhood-planning-in-tewkesbury/bishops-cleeve/" target="_blank" rel="noopener">Bishops Cleeve</a></td></tr>
+            <tr><td><a href="https://tewkesbury.gov.uk/services/planning/planning-policy/neighbourhood-planning/neighbourhood-planning-in-tewkesbury/churchdown-and-innsworth/" target="_blank" rel="noopener">Churchdown and Innsworth</a></td><td><a href="https://tewkesbury.gov.uk/services/planning/planning-policy/neighbourhood-planning/neighbourhood-planning-in-tewkesbury/deerhurst/" target="_blank" rel="noopener">Deerhurst</a></td></tr>
+            <tr><td><a href="https://tewkesbury.gov.uk/services/planning/planning-policy/neighbourhood-planning/neighbourhood-planning-in-tewkesbury/down-hatherley-norton-and-twigworth/" target="_blank" rel="noopener">Down Hatherley, Norton and Twigworth</a></td><td><a href="https://tewkesbury.gov.uk/services/planning/planning-policy/neighbourhood-planning/neighbourhood-planning-in-tewkesbury/dumbleton/" target="_blank" rel="noopener">Dumbleton</a></td></tr>
+            <tr><td><a href="https://tewkesbury.gov.uk/services/planning/planning-policy/neighbourhood-planning/neighbourhood-planning-in-tewkesbury/gotherington/" target="_blank" rel="noopener">Gotherington</a></td><td><a href="https://tewkesbury.gov.uk/services/planning/planning-policy/neighbourhood-planning/neighbourhood-planning-in-tewkesbury/highnam/" target="_blank" rel="noopener">Highnam</a></td></tr>
+            <tr><td><a href="https://tewkesbury.gov.uk/services/planning/planning-policy/neighbourhood-planning/neighbourhood-planning-in-tewkesbury/highnam/" target="_blank" rel="noopener">Highnam</a></td><td><a href="https://tewkesbury.gov.uk/services/planning/planning-policy/neighbourhood-planning/neighbourhood-planning-in-tewkesbury/northway/" target="_blank" rel="noopener">Northway</a></td></tr>
+            <tr><td><a href="https://tewkesbury.gov.uk/services/planning/planning-policy/neighbourhood-planning/neighbourhood-planning-in-tewkesbury/twyning/" target="_blank" rel="noopener">Twyning</a></td><td><a href="https://tewkesbury.gov.uk/services/planning/planning-policy/neighbourhood-planning/neighbourhood-planning-in-tewkesbury/stoke-orchard-and-tredington/" target="_blank" rel="noopener">Stoke Orchard and Tredington</a></td></tr>
+            <tr><td><a href="https://tewkesbury.gov.uk/services/planning/planning-policy/neighbourhood-planning/neighbourhood-planning-in-tewkesbury/winchcombe-and-sudeley/" target="_blank" rel="noopener">Winchcombe and Sudeley</a></td><td><a href="https://tewkesbury.gov.uk/services/planning/planning-policy/neighbourhood-planning/neighbourhood-planning-in-tewkesbury/tewkesbury-town/" target="_blank" rel="noopener">Tewkesbury Town</a></td></tr>
+            <tr><td><a href="https://tewkesbury.gov.uk/services/planning/planning-policy/neighbourhood-planning/neighbourhood-planning-in-tewkesbury/ashchurch-rural/" target="_blank" rel="noopener">Ashchurch Rural</a></td><td><a href="https://tewkesbury.gov.uk/services/planning/planning-policy/neighbourhood-planning/neighbourhood-planning-in-tewkesbury/uckington/" target="_blank" rel="noopener">Uckington</a></td></tr>
+            <tr><td><a href="https://tewkesbury.gov.uk/services/planning/planning-policy/neighbourhood-planning/neighbourhood-planning-in-tewkesbury/the-leigh/" target="_blank" rel="noopener">The Leigh</a></td><td><a href="https://tewkesbury.gov.uk/services/planning/planning-policy/neighbourhood-planning/neighbourhood-planning-in-tewkesbury/dumbleton/" target="_blank" rel="noopener">Dumbleton</a> - area designation</td></tr>
+            <tr><td><a href="https://tewkesbury.gov.uk/services/planning/planning-policy/neighbourhood-planning/neighbourhood-planning-in-tewkesbury/woodmancote/" target="_blank" rel="noopener">Woodmancote</a></td><td><a href="https://tewkesbury.gov.uk/services/planning/planning-policy/neighbourhood-planning/neighbourhood-planning-in-tewkesbury/uckington/" target="_blank" rel="noopener">Uckington</a> - area designation</td></tr>
+          </tbody>
+        </table>
+
+        <table class="plan-table">
+          <caption>Stroud District</caption>
+          <thead><tr><th scope="col">Made Plan</th><th scope="col">In development</th></tr></thead>
+          <tbody>
+            <tr><td><a href="https://www.stroud.gov.uk/media/hiikxzki/bt-parish-plan-final-referendum-version-2024_opt.pdf" target="_blank" rel="noopener">Brimscombe and Thrupp</a></td><td><a href="https://www.stroud.gov.uk/environment/planning-and-building-control/planning-strategy/emerging-neighbourhood-plans/bisley-with-lypiatt/" target="_blank" rel="noopener">Bisley-with-Lypiatt</a></td></tr>
+            <tr><td><a href="https://www.stroud.gov.uk/media/go5dhaxa/cam-ndp-rererendumv8-lowres-1.pdf" target="_blank" rel="noopener">Cam</a></td><td><a href="https://www.stroud.gov.uk/environment/planning-and-building-control/planning-strategy/emerging-neighbourhood-plans/slimbridge-parish-council-plan/" target="_blank" rel="noopener">Slimbridge</a></td></tr>
+            <tr><td><a href="https://www.stroud.gov.uk/media/sh5op1gh/dursley-ndp-v36-updated-021018_opt-min.pdf" target="_blank" rel="noopener">Dursley</a></td><td></td></tr>
+            <tr><td>Easington</td><td></td></tr>
+            <tr><td><a href="https://www.stroud.gov.uk/media/enyndl1p/hardwicke-ndp-final-document-july-2017.pdf" target="_blank" rel="noopener">Hardwicke</a></td><td></td></tr>
+            <tr><td><a href="https://www.stroud.gov.uk/media/u3cb5jgq/hndp-10-march-2021.pdf" target="_blank" rel="noopener">Horsley</a></td><td></td></tr>
+            <tr><td><a href="https://www.stroud.gov.uk/media/ae4newse/20170320-kingswood-ndp-final-referendum-version.pdf" target="_blank" rel="noopener">Kingswood</a></td><td></td></tr>
+            <tr><td><a href="https://www.stroud.gov.uk/media/3rnlqb4x/ndp-9-april-2019-referendum-version-10.pdf" target="_blank" rel="noopener">Minchinhampton</a></td><td></td></tr>
+            <tr><td><a href="https://www.stroud.gov.uk/media/fyufnzxk/ndpfeb24_0324.pdf" target="_blank" rel="noopener">Slimbridge</a></td><td></td></tr>
+            <tr><td><a href="https://www.stroud.gov.uk/media/0qlng0fq/snp-referendum-10-17-web.pdf" target="_blank" rel="noopener">Stonehouse</a></td><td></td></tr>
+            <tr><td><a href="https://www.stroud.gov.uk/media/az0n4s5r/ndp-64-web-version.pdf" target="_blank" rel="noopener">Stroud Town Centre</a></td><td></td></tr>
+            <tr><td><a href="https://www.stroud.gov.uk/media/2scmu5fb/wr-ndp-final-plan-document.pdf" target="_blank" rel="noopener">Whiteshill and Ruscombe</a></td><td></td></tr>
+          </tbody>
+        </table>
+
+        <table class="plan-table">
+          <caption>Cotswolds District</caption>
+          <thead><tr><th scope="col">Made Plan</th><th scope="col">In development</th></tr></thead>
+          <tbody>
+            <tr><td><a href="https://www.cotswold.gov.uk/media/morfad3q/stow-on-the-wold-and-the-swells-made-neighbourhood-development-plan-october-2024.pdf" target="_blank" rel="noopener">Stow-on-the-Wold and the Swells</a></td><td><a href="https://www.cotswold.gov.uk/media/1udchh5z/ampney-crucis-submission-for-designation.pdf" target="_blank" rel="noopener">Ampney Crucis</a></td></tr>
+            <tr><td><a href="https://www.cotswold.gov.uk/media/fc4b3bd5/down-ampney-made-neighbourhood-plan-march-2024.pdf" target="_blank" rel="noopener">Down Ampney</a></td><td><a href="https://www.cotswold.gov.uk/media/fv4bdkra/andoversford-submission-for-designation.pdf" target="_blank" rel="noopener">Andoversford</a></td></tr>
+            <tr><td><a href="https://www.cotswold.gov.uk/media/z24ioi45/fairford-neighbourhood-plan-v1-3.pdf" target="_blank" rel="noopener">Fairford</a></td><td><a href="https://www.cotswold.gov.uk/media/zbfbhxtw/blockley-submission-for-designation.pdf" target="_blank" rel="noopener">Blockley</a></td></tr>
+            <tr><td><a href="https://www.cotswold.gov.uk/media/2zuhjc1d/scndp-made-plan.pdf" target="_blank" rel="noopener">South Cerney</a></td><td><a href="https://www.cotswold.gov.uk/media/8d8c3a340d6acc7/chedworth-parish-boundary.pdf" target="_blank" rel="noopener">Chedworth</a></td></tr>
+            <tr><td><a href="https://www.cotswold.gov.uk/media/ltzc0yyw/kemble-and-ewen-made-plan-may-2021.pdf" target="_blank" rel="noopener">Kemble and Ewen</a></td><td><a href="https://www.cotswold.gov.uk/media/ghnd4v0f/chipping-campden-map.pdf" target="_blank" rel="noopener">Chipping Campden</a></td></tr>
+            <tr><td><a href="https://www.cotswold.gov.uk/media/fv5mojxo/preston-ndp-made-plan-may-2021.pdf" target="_blank" rel="noopener">Preston</a></td><td><a href="https://www.cotswold.gov.uk/media/xnfndy0e/cirencester-submission-for-designation.pdf" target="_blank" rel="noopener">Cirencester</a></td></tr>
+            <tr><td><a href="https://www.cotswold.gov.uk/media/40wkn2hr/somerford-keynes-and-shorncote-made-plan-2021.pdf" target="_blank" rel="noopener">Somerford Keynes and Shorncote</a></td><td><a href="https://www.cotswold.gov.uk/media/dghlbijm/ebrington-submission-for-designation.pdf" target="_blank" rel="noopener">Ebrington</a></td></tr>
+            <tr><td><a href="https://www.cotswold.gov.uk/media/5b1j2xos/lechlade-neighbourhood-plan.pdf" target="_blank" rel="noopener">Lechlade on Thames</a></td><td><a href="https://www.cotswold.gov.uk/media/cmkpi43d/moreton-in-marsh-submission-for-designtation.pdf" target="_blank" rel="noopener">Moreton in Marsh</a></td></tr>
+            <tr><td><a href="https://www.cotswold.gov.uk/media/gxzdza5x/northleach-with-eastington-np-made-plan.pdf" target="_blank" rel="noopener">Northleach with Easington</a></td><td><a href="https://www.cotswold.gov.uk/media/hemnzneq/siddington-submission-for-designation.pdf" target="_blank" rel="noopener">Siddington</a></td></tr>
+            <tr><td><a href="https://www.cotswold.gov.uk/media/jn1eb5f0/tetbury-and-tetbury-upton-ndp-made-dec-17.pdf" target="_blank" rel="noopener">Tetbury and Tetbury Upton</a></td><td><a href="https://www.cotswold.gov.uk/media/2ymdw0mm/upper-rissington-submission-for-designation.pdf" target="_blank" rel="noopener">Upper Rissington</a></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+    </article>
+  </div>
+
+  <footer class="guide-foot">
+    Planning for Nature Toolkit — a Neighbourhood Nature Project by Gloucestershire Wildlife Trust.
+    This page reproduces the toolkit text for the web; for the full reference library see the
+    <a href="/wiki">Planning Wiki</a>.
+  </footer>
+
+</body>
+</html>

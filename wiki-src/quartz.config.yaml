@@ -1,0 +1,196 @@
+# yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
+configuration:
+  pageTitle: GWT Planning Wiki
+  pageTitleSuffix: ""
+  enableSPA: true
+  enablePopovers: true
+  analytics:
+    provider: null
+  locale: en-GB
+  baseUrl: localhost:8080
+  ignorePatterns:
+    - private
+    - templates
+    - .obsidian
+    - "*.canvas"
+  theme:
+    fontOrigin: googleFonts
+    cdnCaching: true
+    typography:
+      header: Schibsted Grotesk
+      body: Source Sans Pro
+      code: IBM Plex Mono
+    colors:
+      lightMode:
+        light: "#ffffff"
+        lightgray: "#e8f0e8"
+        gray: "#6b8f6b"
+        darkgray: "#2d4a2d"
+        dark: "#1a2e1a"
+        secondary: "#2d6a2d"
+        tertiary: "#5a9e5a"
+        highlight: rgba(45, 106, 45, 0.12)
+        textHighlight: "#c8e6c888"
+      darkMode:
+        light: "#161a16"
+        lightgray: "#1e2e1e"
+        gray: "#4a6b4a"
+        darkgray: "#c8d8c8"
+        dark: "#e8f0e8"
+        secondary: "#6aaa6a"
+        tertiary: "#5a9e5a"
+        highlight: rgba(106, 170, 106, 0.15)
+        textHighlight: "#4a7a4a88"
+plugins:
+  - source: github:quartz-community/created-modified-date
+    enabled: true
+    options:
+      defaultDateType: modified
+      priority:
+        - frontmatter
+        - filesystem
+    order: 10
+  - source: github:quartz-community/syntax-highlighting
+    enabled: true
+    options:
+      theme:
+        light: github-light
+        dark: github-dark
+      keepBackground: false
+    order: 20
+  - source: github:quartz-community/obsidian-flavored-markdown
+    enabled: true
+    options:
+      enableInHtmlEmbed: false
+      enableCheckbox: true
+    order: 30
+  - source: github:quartz-community/github-flavored-markdown
+    enabled: true
+    order: 40
+  - source: github:quartz-community/table-of-contents
+    enabled: true
+    order: 50
+    layout:
+      position: right
+      priority: 30
+  - source: github:quartz-community/crawl-links
+    enabled: true
+    options:
+      markdownLinkResolution: shortest
+    order: 60
+  - source: github:quartz-community/description
+    enabled: true
+    order: 70
+  - source: github:quartz-community/alias-redirects
+    enabled: true
+  - source: github:quartz-community/content-index
+    enabled: true
+    options:
+      enableSiteMap: true
+      enableRSS: false
+  - source: github:quartz-community/favicon
+    enabled: true
+  - source: github:quartz-community/og-image
+    enabled: true
+  - source: github:quartz-community/content-page
+    enabled: true
+  - source: github:quartz-community/folder-page
+    enabled: true
+  - source: github:quartz-community/tag-page
+    enabled: true
+  - source: github:quartz-community/explorer
+    enabled: true
+    options:
+      folderClickBehavior: collapse
+    layout:
+      position: left
+      priority: 50
+  - source: github:quartz-community/graph
+    enabled: true
+    options:
+      localGraph:
+        showTags: false
+        depth: 2
+        repelForce: 0.55
+        centerForce: 0.5
+        linkDistance: 42
+        fontSize: 0.3
+        scale: 1.1
+      globalGraph:
+        showTags: false
+        enableRadial: false
+        repelForce: 0.4
+        centerForce: 0.7
+        linkDistance: 26
+        fontSize: 0.28
+    layout:
+      position: right
+      priority: 10
+  - source: github:quartz-community/search
+    enabled: true
+    layout:
+      position: left
+      priority: 20
+      group: toolbar
+      groupOptions:
+        grow: true
+  - source: github:quartz-community/backlinks
+    enabled: true
+    layout:
+      position: right
+      priority: 50
+  - source: github:quartz-community/article-title
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 10
+  - source: github:quartz-community/content-meta
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 20
+  - source: github:quartz-community/page-title
+    enabled: true
+    layout:
+      position: left
+      priority: 10
+  - source: github:quartz-community/darkmode
+    enabled: true
+    layout:
+      position: left
+      priority: 30
+      group: toolbar
+  - source: github:quartz-community/breadcrumbs
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 5
+      condition: not-index
+  - source: github:quartz-community/footer
+    enabled: true
+    options:
+      links:
+        "Gloucestershire Wildlife Trust": "https://www.gloucestershirewildlifetrust.co.uk"
+        "Report an issue": "https://www.gloucestershirewildlifetrust.co.uk/contact"
+  - source: github:quartz-community/spacer
+    enabled: true
+    options: {}
+    order: 25
+    layout:
+      position: left
+      priority: 25
+      display: mobile-only
+  - source: github:quartz-community/note-properties
+    enabled: false
+  - source: github:quartz-community/remove-draft
+    enabled: true
+  - source: github:quartz-community/unlisted-pages
+    enabled: true
+    options: {}
+    order: 45
+layout:
+  groups:
+    toolbar:
+      priority: 35
+      direction: row
+      gap: 0.5rem

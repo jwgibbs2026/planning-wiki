@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gloucestershire Planning Applications</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+  <link rel="stylesheet" href="/map/static/style.css?v=2" />
+</head>
+<body>
+  <div id="content-row">
+  <div id="sidebar">
+    <h1>Gloucestershire Planning</h1>
+    <p class="muted">Live/recent applications across the seven local authorities.
+      Source: <a href="https://www.planit.org.uk/" target="_blank" rel="noopener">PlanIt</a>.</p>
+
+    <label>Authority
+      <select id="filter-authority"><option value="">All authorities</option></select>
+    </label>
+    <label>Status
+      <select id="filter-status"><option value="">Any status</option></select>
+    </label>
+    <label>Received within
+      <select id="filter-days">
+        <option value="">Any time</option>
+        <option value="7">7 days</option>
+        <option value="30" selected>30 days</option>
+        <option value="90">90 days</option>
+        <option value="365">1 year</option>
+      </select>
+    </label>
+    <button id="apply">Apply filters</button>
+
+    <div id="count" class="muted"></div>
+  </div>
+  <div id="map"></div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <script src="/map/static/app.js?v=2"></script>
+</body>
+</html>

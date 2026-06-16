@@ -1,0 +1,19 @@
+# --- Python ---
+dashboard/.venv/
+**/__pycache__/
+*.py[cod]
+.env
+
+# --- Node / Quartz build artifacts (regenerated on deploy) ---
+wiki-src/node_modules/
+wiki-src/public/
+wiki-src/.quartz/
+wiki-src/.quartz-cache/
+
+# --- Editor / OS ---
+.obsidian/workspace*.json
+.DS_Store
+Thumbs.db
+
+# --- Local tooling state (not needed to run the site) ---
+.llm-wiki/

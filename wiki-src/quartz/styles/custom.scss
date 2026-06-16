@@ -1,0 +1,57 @@
+@use "./variables.scss" as *;
+
+// ── Graph legend ─────────────────────────────────────────────────────────────
+.graph-legend {
+  // Fixed to the viewport so it is immune to the plugin toggling
+  // .global-graph-outer between display:none / inline-block. It still only
+  // shows while the modal is open, because a display:none ancestor hides it.
+  position: fixed;
+  bottom: 1.75rem;
+  left: 1.75rem;
+  background: rgba(13, 17, 24, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 0.85rem 1.05rem;
+  pointer-events: none;
+  z-index: 10001;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.55);
+}
+
+.graph-legend-title {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.6rem;
+}
+
+.graph-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.36rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.graph-legend-dot {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15);
+}
+
+.graph-legend-label {
+  font-size: 0.74rem;
+  color: rgba(255, 255, 255, 0.88);
+  white-space: nowrap;
+}
+
+// Legend is absolutely positioned inside .global-graph-outer which is already
+// position:fixed (full-screen overlay) — no override needed here.

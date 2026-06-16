@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem \"C:\\\\Users\\\\jwgib\\\\Documents\\\\Planning toolkit wiki\" -Recurse)",
+      "Bash(Select-Object FullName, Length)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\jwgib\\\\Documents\\\\Planning toolkit wiki\" -Recurse -File | Where-Object { $_.Extension -eq \".md\" } | Sort-Object DirectoryName | Select-Object @{N=\"Path\";E={$_.FullName.Replace\\(\"C:\\\\Users\\\\jwgib\\\\Documents\\\\Planning toolkit wiki\\\\\",\"\"\\)}} | Format-Table -AutoSize)",
+      "WebFetch(domain:www.gov.uk)",
+      "WebFetch(domain:www.cotswolds-nl.org.uk)",
+      "WebSearch",
+      "WebFetch(domain:www.gloucestershirewildlifetrust.co.uk)",
+      "WebFetch(domain:www.gcer.co.uk)",
+      "WebFetch(domain:www.gloucestershire.gov.uk)",
+      "Bash(Remove-Item \"C:\\\\Users\\\\jwgib\\\\Documents\\\\Planning toolkit wiki\\\\wiki\\\\sources\\\\National Standards for Sustainable Drainage Systems.md\")",
+      "Bash(find \"C:\\\\Users\\\\jwgib\\\\Documents\\\\quartz-5\\\\.quartz\\\\plugins\" -name \"remove-draft\" -type d)",
+      "Bash(find \"C:\\\\Users\\\\jwgib\\\\Documents\\\\quartz-5\\\\.quartz\\\\plugins\" -name \"unlisted-pages\" -type d)",
+      "Bash(find \"C:\\\\Users\\\\jwgib\\\\Documents\\\\quartz-5\\\\quartz\" -name \"*frontmatter*\" -o -name \"*yaml*\" 2>/dev/null | head -10)",
+      "WebFetch(domain:www.planit.org.uk)",
+      "Bash(./.venv/Scripts/python.exe -c ' *)",
+      "Bash(./.venv/Scripts/python.exe -c \"from planning_dashboard.api import app; print\\('import OK'\\); print\\([r.path for r in app.routes if hasattr\\(r,'path'\\)][:20]\\)\")",
+      "Bash(./.venv/Scripts/python.exe -m uvicorn planning_dashboard.api:app --port 8077 --log-level warning)",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}

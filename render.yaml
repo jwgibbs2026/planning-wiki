@@ -1,0 +1,45 @@
+# Render Blueprint — deploys the whole site (Guide + Wiki + Map) as one Docker
+# web service. Render reads this file automatically when you create a Blueprint.
+#
+# Free tier: no persistent disk, so the map uses the planning.sqlite that ships
+# in the image. To refresh map data, re-run the importer locally and commit the
+# updated dashboard/data/planning.sqlite (see DEPLOY.md), or upgrade to a paid
+# instance + disk + cron for automatic daily refresh (commented block below).
+
+services:
+  - type: web
+    name: gloucestershire-planning
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /map
+    autoDeploy: true
+
+# --- Optional: automatic daily map-data refresh (needs a paid instance) ------
+# To enable: give the web service a persistent disk, point the DB at it, and add
+# a cron job that runs the importer against the same disk.
+#
+#     services:
+#       - type: web
+#         ...
+#         disk:
+#           name: data
+#           mountPath: /var/data
+#           sizeGB: 1
+#         envVars:
+#           - key: PLANNING_DB_PATH
+#             value: /var/data/planning.sqlite
+#
+#     - type: cron
+#       name: planning-import
+#       runtime: docker
+#       dockerfilePath: ./Dockerfile
+#       schedule: "0 6 * * *"
+#       dockerCommand: python dashboard/scripts/run_import.py
+#       disk:
+#         name: data
+#         mountPath: /var/data
+#         sizeGB: 1
+#       envVars:
+#         - key: PLANNING_DB_PATH
+#           value: /var/data/planning.sqlite
