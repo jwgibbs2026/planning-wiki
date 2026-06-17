@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: null
   locale: en-GB
-  baseUrl: localhost:8080
+  baseUrl: gwt-planning-wiki.netlify.app/wiki
   ignorePatterns:
     - private
     - templates
@@ -105,24 +105,48 @@ plugins:
     layout:
       position: left
       priority: 50
-  - source: github:quartz-community/graph
+  # Vendored, customised fork of quartz-community/graph (see wiki-src/plugins/graph).
+  # Adds Obsidian-style folder colour groups, arrows, node sizing and orphan
+  # exclusion — none of which exist in the upstream plugin.
+  - source: ./plugins/graph
     enabled: true
     options:
       localGraph:
         showTags: false
         depth: 2
-        repelForce: 0.55
-        centerForce: 0.5
-        linkDistance: 42
-        fontSize: 0.3
+        repelForce: 0.6
+        centerForce: 0.45
+        linkDistance: 32
+        fontSize: 0.32
         scale: 1.1
+        showArrow: true
+        nodeSizeMultiplier: 1.2
+        excludePrefixes:
+          - "tags/"
+        colorGroups: &graphColors
+          biodiversity-and-nature-recovery: "#2e7d32"
+          habitats-and-green-infrastructure: "#66a366"
+          protected-species: "#c2884e"
+          protected-landscapes: "#7aa35a"
+          designated-sites: "#3f9e8c"
+          legislation-and-policy: "#8a6d9e"
+          planning-system: "#4a7fb5"
+          organisations: "#e07a5f"
+          gloucestershire: "#d9a93b"
       globalGraph:
         showTags: false
+        depth: -1
         enableRadial: false
-        repelForce: 0.4
-        centerForce: 0.7
-        linkDistance: 26
-        fontSize: 0.28
+        repelForce: 0.5
+        centerForce: 0.6
+        linkDistance: 30
+        fontSize: 0.3
+        scale: 0.95
+        showArrow: true
+        nodeSizeMultiplier: 1.2
+        excludePrefixes:
+          - "tags/"
+        colorGroups: *graphColors
     layout:
       position: right
       priority: 10
