@@ -128,6 +128,15 @@ import {
         }
         return false;
       }
+      // A node's colour/cluster group: its top folder, or — for a top-level hub
+      // page whose slug names a group (e.g. "protected-species") — that group.
+      // Truly ungrouped pages (wiki home, glossary) return "" and sit centre.
+      function groupOf(id) {
+        var f = topFolder(id);
+        if (f) return f;
+        if (colorGroups[id]) return id;
+        return "";
+      }
 
       var data;
       try {
@@ -222,7 +231,7 @@ import {
           id: url,
           text: text,
           tags: nodeTags,
-          group: isTag ? "" : topFolder(url),
+          group: isTag ? "" : groupOf(url),
           x: Math.random() * width - width / 2,
           y: Math.random() * height - height / 2,
           vx: 0,
@@ -318,30 +327,34 @@ import {
         simulation.force("radial", d3.forceRadial(radius).strength(0.2));
       }
 
-      // Group "orbits": pull same-group nodes toward a per-group anchor arranged
-      // around a circle, so each topic folder clusters together (Obsidian-style).
+      // Group "orbits": each topic folder (a colorGroups key) gets an anchor
+      // arranged around a circle; ungrouped hub pages (e.g. the wiki home and
+      // Glossary) are pulled firmly to the centre so everything orbits them.
       if (groupForce > 0) {
-        var groupKeys = [];
-        for (var i = 0; i < nodes.length; i++) {
-          var gk2 = nodes[i].group || "";
-          if (groupKeys.indexOf(gk2) === -1) groupKeys.push(gk2);
-        }
+        var groupList = Object.keys(colorGroups);
         var anchorRadius = Math.min(width, height) * 0.34;
         var groupAnchors = {};
-        for (var i = 0; i < groupKeys.length; i++) {
-          var angle = (i / groupKeys.length) * 2 * Math.PI - Math.PI / 2;
-          groupAnchors[groupKeys[i]] = {
+        for (var i = 0; i < groupList.length; i++) {
+          var angle = (i / groupList.length) * 2 * Math.PI - Math.PI / 2;
+          groupAnchors[groupList[i]] = {
             x: Math.cos(angle) * anchorRadius,
             y: Math.sin(angle) * anchorRadius,
           };
         }
+        var centreStrength = Math.max(groupForce * 2, 0.6);
+        function groupAnchor(d) {
+          return groupAnchors[d.group] || { x: 0, y: 0 };
+        }
+        function groupAnchorStrength(d) {
+          return groupAnchors[d.group] ? groupForce : centreStrength;
+        }
         simulation.force(
           "groupX",
-          d3.forceX(function (d) { return groupAnchors[d.group || ""].x; }).strength(groupForce),
+          d3.forceX(function (d) { return groupAnchor(d).x; }).strength(groupAnchorStrength),
         );
         simulation.force(
           "groupY",
-          d3.forceY(function (d) { return groupAnchors[d.group || ""].y; }).strength(groupForce),
+          d3.forceY(function (d) { return groupAnchor(d).y; }).strength(groupAnchorStrength),
         );
       }
 
@@ -374,7 +387,7 @@ import {
         if (d.id === slug) {
           return secondary;
         }
-        var group = groupColors[topFolder(d.id)];
+        var group = groupColors[d.group || topFolder(d.id)];
         if (group) {
           return group;
         }
