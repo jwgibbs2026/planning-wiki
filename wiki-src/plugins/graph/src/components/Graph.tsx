@@ -31,6 +31,10 @@ export interface D3Config {
   showArrow?: boolean;
   /** Colour nodes by their top-level folder, e.g. { "organisations": "#e07a5f" }. */
   colorGroups?: Record<string, string>;
+  /** Pull same-group nodes toward a shared anchor (0 = off). Creates group clusters. */
+  groupForce?: number;
+  /** Remove nodes with no edges (keeps the current page). */
+  removeOrphans?: boolean;
 }
 
 export interface GraphOptions {
@@ -57,6 +61,8 @@ const defaultOptions: GraphOptions = {
     nodeSizeMultiplier: 1,
     showArrow: false,
     colorGroups: {},
+    groupForce: 0,
+    removeOrphans: false,
   },
   globalGraph: {
     drag: true,
@@ -76,6 +82,8 @@ const defaultOptions: GraphOptions = {
     nodeSizeMultiplier: 1,
     showArrow: false,
     colorGroups: {},
+    groupForce: 0,
+    removeOrphans: false,
   },
 };
 

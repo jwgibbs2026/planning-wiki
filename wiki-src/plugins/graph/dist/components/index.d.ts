@@ -22,6 +22,10 @@ interface D3Config {
     showArrow?: boolean;
     /** Colour nodes by their top-level folder, e.g. { "organisations": "#e07a5f" }. */
     colorGroups?: Record<string, string>;
+    /** Pull same-group nodes toward a shared anchor (0 = off). Creates group clusters. */
+    groupForce?: number;
+    /** Remove nodes with no edges (keeps the current page). */
+    removeOrphans?: boolean;
 }
 interface GraphOptions {
     localGraph?: Partial<D3Config>;

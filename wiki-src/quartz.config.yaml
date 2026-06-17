@@ -121,6 +121,7 @@ plugins:
         scale: 1.1
         showArrow: true
         nodeSizeMultiplier: 1.2
+        removeOrphans: true
         excludePrefixes:
           - "tags/"
         colorGroups: &graphColors
@@ -137,13 +138,15 @@ plugins:
         showTags: false
         depth: -1
         enableRadial: false
-        repelForce: 0.5
-        centerForce: 0.6
-        linkDistance: 30
+        repelForce: 0.55
+        centerForce: 0.05
+        linkDistance: 28
         fontSize: 0.3
-        scale: 0.95
+        scale: 1.0
         showArrow: true
         nodeSizeMultiplier: 1.2
+        groupForce: 0.35
+        removeOrphans: true
         excludePrefixes:
           - "tags/"
         colorGroups: *graphColors

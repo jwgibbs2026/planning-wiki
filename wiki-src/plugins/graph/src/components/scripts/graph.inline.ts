@@ -115,6 +115,8 @@ import {
       var nodeSizeMultiplier = config.nodeSizeMultiplier || 1;
       var showArrow = config.showArrow;
       var colorGroups = config.colorGroups || {};
+      var groupForce = config.groupForce || 0;
+      var removeOrphans = config.removeOrphans;
 
       function topFolder(id) {
         var i = id.indexOf("/");
@@ -220,6 +222,7 @@ import {
           id: url,
           text: text,
           tags: nodeTags,
+          group: isTag ? "" : topFolder(url),
           x: Math.random() * width - width / 2,
           y: Math.random() * height - height / 2,
           vx: 0,
@@ -238,6 +241,23 @@ import {
           if (sourceNode && targetNode) {
             graphLinks.push({ source: sourceNode, target: targetNode });
           }
+        }
+      }
+
+      // Drop orphan nodes (no edges) so the graph isn't littered with stray
+      // dots — e.g. folder index pages. The current page is always kept.
+      if (removeOrphans) {
+        var degree = {};
+        for (var i = 0; i < graphLinks.length; i++) {
+          degree[graphLinks[i].source.id] = (degree[graphLinks[i].source.id] || 0) + 1;
+          degree[graphLinks[i].target.id] = (degree[graphLinks[i].target.id] || 0) + 1;
+        }
+        nodes = nodes.filter(function (n) {
+          return n.id === slug || degree[n.id] > 0;
+        });
+        nodeMap = new Map();
+        for (var i = 0; i < nodes.length; i++) {
+          nodeMap.set(nodes[i].id, nodes[i]);
         }
       }
 
@@ -296,6 +316,33 @@ import {
       if (enableRadial) {
         var radius = (Math.min(width, height) / 2) * 0.8;
         simulation.force("radial", d3.forceRadial(radius).strength(0.2));
+      }
+
+      // Group "orbits": pull same-group nodes toward a per-group anchor arranged
+      // around a circle, so each topic folder clusters together (Obsidian-style).
+      if (groupForce > 0) {
+        var groupKeys = [];
+        for (var i = 0; i < nodes.length; i++) {
+          var gk2 = nodes[i].group || "";
+          if (groupKeys.indexOf(gk2) === -1) groupKeys.push(gk2);
+        }
+        var anchorRadius = Math.min(width, height) * 0.34;
+        var groupAnchors = {};
+        for (var i = 0; i < groupKeys.length; i++) {
+          var angle = (i / groupKeys.length) * 2 * Math.PI - Math.PI / 2;
+          groupAnchors[groupKeys[i]] = {
+            x: Math.cos(angle) * anchorRadius,
+            y: Math.sin(angle) * anchorRadius,
+          };
+        }
+        simulation.force(
+          "groupX",
+          d3.forceX(function (d) { return groupAnchors[d.group || ""].x; }).strength(groupForce),
+        );
+        simulation.force(
+          "groupY",
+          d3.forceY(function (d) { return groupAnchors[d.group || ""].y; }).strength(groupForce),
+        );
       }
 
       var linkContainer = new PIXI.Container();
