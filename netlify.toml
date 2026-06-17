@@ -4,7 +4,10 @@
 # publishes. No server required.
 
 [build]
-  command = "cd wiki-src && npm ci && npx quartz plugin install && npx quartz build && cd .. && node build-static.mjs"
+  # Invoke the Quartz CLI via `node` (not `npx quartz`) so the build doesn't
+  # depend on the bin's executable bit, which Netlify's runner doesn't always
+  # preserve (caused a "quartz: Permission denied" build failure).
+  command = "cd wiki-src && npm ci && node ./quartz/bootstrap-cli.mjs plugin install && node ./quartz/bootstrap-cli.mjs build && cd .. && node build-static.mjs"
   publish = "dist"
 
 [build.environment]
