@@ -10,7 +10,7 @@ sources: ["Natural England - Bats Planning Guidance.md", "Natural England - Grea
 
 # EPS Mitigation Licence
 
-An EPS Mitigation Licence (sometimes called a species licence or derogation licence) is a legal permission issued by Natural England that allows a developer to carry out activities that would otherwise be illegal under the Conservation of Habitats and Species Regulations 2010 (2017 consolidation). It is required when development will unavoidably affect [[European Protected Species]] — most commonly bats, great crested newts, or otters — and cannot avoid disturbing, harming, or destroying their habitats after applying the mitigation hierarchy (avoidance → mitigation → compensation).
+An EPS Mitigation Licence (sometimes called a species licence or derogation licence) is a legal permission issued by Natural England that allows a developer to carry out activities that would otherwise be illegal under the Conservation of Habitats and Species Regulations 2017 (2017 consolidation). It is required when development will unavoidably affect [[European Protected Species]] — most commonly bats, great crested newts, or otters — and cannot avoid disturbing, harming, or destroying their habitats after applying the mitigation hierarchy (avoidance → mitigation → compensation).
 
 ---
 
@@ -162,7 +162,7 @@ Developers working in Gloucestershire on sites with bat roosts, great crested ne
 ## Related
 
 - [[European Protected Species]]
-- [[Conservation of Habitats and Species Regulations 2010]]
+- [[Conservation of Habitats and Species Regulations 2017]]
 - [[Bats in Planning]]
 - [[Great Crested Newts in Planning]]
 - [[Otters in Planning]]

@@ -46,8 +46,9 @@ async function main() {
   // 1. Toolkit Guide at the site root.
   await fs.copyFile(path.join(WEB, "guide.html"), path.join(DIST, "index.html"));
 
-  // 2. Shared nav bar at the root.
+  // 2. Shared nav bar + brand assets (logo, etc.) at the root.
   await fs.copyFile(path.join(WEB, "nav.js"), path.join(DIST, "nav.js"));
+  await copy(path.join(WEB, "assets"), path.join(DIST, "assets"));
 
   // 3. Planning Map assets + static data.
   for (const f of ["index.html", "app.js", "style.css", "authorities.json", "applications.geojson"]) {

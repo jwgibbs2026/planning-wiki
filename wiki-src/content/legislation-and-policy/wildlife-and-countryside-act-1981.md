@@ -47,7 +47,7 @@ WCA 1981 Part II established the framework for Sites of Special Scientific Inter
 
 | Legislation | Relationship |
 |---|---|
-| Conservation of Habitats and Species Regulations 2010 | Implements EU Habitats Directive; creates EPS framework overlapping with WCA 1981 for some species (GCN, bats, otters also on Schedule 5) |
+| Conservation of Habitats and Species Regulations 2017 | Implements EU Habitats Directive; creates EPS framework overlapping with WCA 1981 for some species (GCN, bats, otters also on Schedule 5) |
 | [[Protection of Badgers Act 1992]] | Dedicated badger legislation; badgers are not protected under WCA 1981 Schedule 5 |
 | Natural Environment and Rural Communities Act 2006 | Creates S41 Species of Principal Importance list; overlaps with WCA 1981 Schedule 1 birds and Schedule 5 animals |
 | CROW Act 2000 | Strengthened SSSI protections under WCA 1981 Part II |
@@ -79,5 +79,5 @@ WCA 1981 protections are engaged across Gloucestershire's diverse habitats. The 
 - [[SSSI]]
 - [[Species of Principal Importance]]
 - [[Natural England]]
-- [[Conservation of Habitats and Species Regulations 2010]]
+- [[Conservation of Habitats and Species Regulations 2017]]
 - [[Home]]

@@ -10,7 +10,7 @@ sources: ["Natural England - Bats Planning Guidance.md", "Natural England - Grea
 
 # European Protected Species
 
-European Protected Species (EPS) are animals and plants afforded the highest tier of legal protection in England. The designation originates from the EU Habitats Directive and is implemented in domestic law through the Conservation of Habitats and Species Regulations 2010 (as consolidated and amended in 2017), which remains in force as retained EU law following Brexit.
+European Protected Species (EPS) are animals and plants afforded the highest tier of legal protection in England. The designation originates from the EU Habitats Directive and is implemented in domestic law through the Conservation of Habitats and Species Regulations 2017 (as consolidated and amended in 2017), which remains in force as retained EU law following Brexit.
 
 Understanding EPS status is essential for anyone involved in planning — developers, LPAs, parish councils, and communities — because the presence of EPS on or near a development site triggers specific legal obligations that cannot be waived or ignored.
 
@@ -175,7 +175,7 @@ EPS are encountered regularly in Gloucestershire planning applications. Bats are
 - [[GCN Surveys]]
 - [[Protected Species]]
 - [[Species of Principal Importance]]
-- [[Conservation of Habitats and Species Regulations 2010]]
+- [[Conservation of Habitats and Species Regulations 2017]]
 - [[Wildlife and Countryside Act 1981]]
 - [[Natural England]]
 - [[Local Planning Authority]]

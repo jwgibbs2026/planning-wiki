@@ -35,7 +35,7 @@ Below them, parish and town councils produce Neighbourhood Development Plans (ND
 
 The planning system is one of the most important levers for protecting wildlife. Policies in the [[NPPF]], Local Plans, and NDPs can require developers to protect habitats, deliver Biodiversity Net Gain, and provide quality Green Infrastructure.
 
-Key legislation underpinning nature in planning includes the Wildlife and Countryside Act 1981, the Conservation of Habitats and Species Regulations 2010, and the Environment Act 2021.
+Key legislation underpinning nature in planning includes the Wildlife and Countryside Act 1981, the Conservation of Habitats and Species Regulations 2017, and the Environment Act 2021.
 
 ## Related
 [[Planning Hierarchy]] · [[Local Planning Authority]] · [[Planning Application]] · [[Planning Inspectorate]] · [[NPPF]] · [[Biodiversity Net Gain]] · [[Getting Involved in Planning]] · [[Home]]

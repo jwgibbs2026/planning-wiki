@@ -28,7 +28,7 @@ Bats also serve as indicators of wider ecological health. Their presence signals
 
 All bat species are protected under two pieces of legislation:
 
-**Conservation of Habitats and Species Regulations 2010** (as amended; the operative version is the 2017 consolidation):
+**Conservation of Habitats and Species Regulations 2017** (as amended; the operative version is the 2017 consolidation):
 - Bats are [[European Protected Species]] (EPS)
 - It is illegal to deliberately kill, injure, disturb, or capture bats
 - It is illegal to damage or destroy a breeding site or resting place — **even when bats are not present**
@@ -149,7 +149,7 @@ Key species of concern in Gloucestershire include lesser horseshoe bat, greater 
 - [[Bat Surveys]]
 - [[Dark Corridors]]
 - [[Protected Species]]
-- [[Conservation of Habitats and Species Regulations 2010]]
+- [[Conservation of Habitats and Species Regulations 2017]]
 - [[Wildlife and Countryside Act 1981]]
 - [[Natural England]]
 - [[Local Planning Authority]]

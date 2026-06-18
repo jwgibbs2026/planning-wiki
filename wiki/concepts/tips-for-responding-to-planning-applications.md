@@ -20,7 +20,7 @@ By the time a planning application is submitted, large-scale design changes are 
 - [[NPPF]] Chapter 15 (Conserving and enhancing the natural environment)
 - Your district's Local Plan biodiversity policies
 - Your Neighbourhood Development Plan nature policies (if one exists)
-- Statutory requirements under the Wildlife and Countryside Act 1981 and Conservation of Habitats and Species Regulations 2010
+- Statutory requirements under the Wildlife and Countryside Act 1981 and Conservation of Habitats and Species Regulations 2017
 
 **Biodiversity Net Gain** — check that the application demonstrates the mandatory 10% Biodiversity Net Gain required under the Environment Act 2021.
 

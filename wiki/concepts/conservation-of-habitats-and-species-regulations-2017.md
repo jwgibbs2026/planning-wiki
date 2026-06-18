@@ -1,7 +1,7 @@
 ---
 tags: [legislation, wildlife-protection, habitats]
 type: legislation
-aliases: [Conservation of Habitats and Species Regulations 2017, Habitats Regulations, Habitats Regulations 2017, HRA, "Conservation of Habitats and Species Regulations 2010"]
+aliases: [Conservation of Habitats and Species Regulations 2017, Habitats Regulations, Habitats Regulations 2017, HRA, "Conservation of Habitats and Species Regulations 2017"]
 year: 2017
 ---
 

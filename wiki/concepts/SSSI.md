@@ -39,11 +39,11 @@ Records of wildlife within and around SSSIs can be found through the Gloucesters
 ## International Designations
 
 Many of the best SSSIs are also given international designations:
-- **Special Area of Conservation (SAC)** — under the Habitats Directive (retained in domestic law via Conservation of Habitats and Species Regulations 2010)
+- **Special Area of Conservation (SAC)** — under the Habitats Directive (retained in domestic law via Conservation of Habitats and Species Regulations 2017)
 - **Special Protection Area (SPA)** — for internationally important bird populations
 - **Ramsar site** — for internationally important wetlands
 
 These international designations trigger **Habitats Regulations Assessment** requirements for any plans or projects that might affect them.
 
 ## Related
-[[Natural England]] · [[Wildlife and Countryside Act 1981]] · [[CROW Act 2000]] · [[Conservation of Habitats and Species Regulations 2010]] · [[Nature Recovery Network]] · [[Local Wildlife Sites]] · [[Gloucestershire Centre for Environmental Records]] · [[Planning Application]] · [[Biodiversity Net Gain]]
+[[Natural England]] · [[Wildlife and Countryside Act 1981]] · [[CROW Act 2000]] · [[Conservation of Habitats and Species Regulations 2017]] · [[Nature Recovery Network]] · [[Local Wildlife Sites]] · [[Gloucestershire Centre for Environmental Records]] · [[Planning Application]] · [[Biodiversity Net Gain]]

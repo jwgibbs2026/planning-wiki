@@ -34,7 +34,7 @@ A set of 12 standards defining what good Green Infrastructure looks like, plus a
 **Community Infrastructure Levy (CIL)**
 A charge on new developments used to fund local infrastructure. Parishes with a made Neighbourhood Development Plan receive 25% of CIL receipts from development in their area.
 
-**Conservation of Habitats and Species Regulations 2010**
+**Conservation of Habitats and Species Regulations 2017**
 UK domestic law implementing the EU Habitats Directive. Protects European Protected Species and designated habitats.
 
 **Councillor**
@@ -95,7 +95,7 @@ A formal request to a Local Planning Authority for permission to carry out devel
 An executive agency that examines Local Plans, handles appeals, and recommends decisions on nationally significant infrastructure.
 
 **Protected Species**
-Animals and plants that receive specific legal protection under the Wildlife and Countryside Act 1981 or Conservation of Habitats and Species Regulations 2010.
+Animals and plants that receive specific legal protection under the Wildlife and Countryside Act 1981 or Conservation of Habitats and Species Regulations 2017.
 
 **[[SSSI]]**
 Site of Special Scientific Interest — the most important category of wildlife site in England, designated by Natural England.

@@ -61,4 +61,4 @@ Gloucestershire contains or is adjacent to several internationally designated si
 The Planning and Infrastructure Act 2025 introduces Environmental Delivery Plans (EDPs) that can replace the requirement for site-specific HRAs for development types covered by an approved EDP. The first EDPs target nutrient neutrality — directly reducing the HRA burden on qualifying developments in affected catchments.
 
 ## Related
-[[Conservation of Habitats and Species Regulations 2010]] · [[SSSI]] · [[Natural England]] · [[Nature Restoration Fund]] · [[Local Plan]] · [[Planning Application]] · [[Local Nature Recovery Strategy]] · [[Severn Estuary]]
+[[Conservation of Habitats and Species Regulations 2017]] · [[SSSI]] · [[Natural England]] · [[Nature Restoration Fund]] · [[Local Plan]] · [[Planning Application]] · [[Local Nature Recovery Strategy]] · [[Severn Estuary]]

@@ -17,30 +17,31 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Schibsted Grotesk
-      body: Source Sans Pro
+      header: Bitter
+      body: Rubik
       code: IBM Plex Mono
     colors:
+      # GWT Neighbourhood Nature palette — Manilla base, Kelp + Fly Agaric accents.
       lightMode:
-        light: "#ffffff"
-        lightgray: "#e8f0e8"
-        gray: "#6b8f6b"
-        darkgray: "#2d4a2d"
-        dark: "#1a2e1a"
-        secondary: "#2d6a2d"
-        tertiary: "#5a9e5a"
-        highlight: rgba(45, 106, 45, 0.12)
-        textHighlight: "#c8e6c888"
+        light: "#f7ecdf"
+        lightgray: "#ece0cf"
+        gray: "#8c8275"
+        darkgray: "#2a2622"
+        dark: "#1c1814"
+        secondary: "#058295"
+        tertiary: "#e9511d"
+        highlight: rgba(5, 130, 149, 0.12)
+        textHighlight: "#fbcdb888"
       darkMode:
-        light: "#161a16"
-        lightgray: "#1e2e1e"
-        gray: "#4a6b4a"
-        darkgray: "#c8d8c8"
-        dark: "#e8f0e8"
-        secondary: "#6aaa6a"
-        tertiary: "#5a9e5a"
-        highlight: rgba(106, 170, 106, 0.15)
-        textHighlight: "#4a7a4a88"
+        light: "#1b1f1e"
+        lightgray: "#2a302d"
+        gray: "#8a9a92"
+        darkgray: "#d8e0db"
+        dark: "#f4f1ea"
+        secondary: "#3fb0c2"
+        tertiary: "#f4855a"
+        highlight: rgba(63, 176, 194, 0.15)
+        textHighlight: "#8a5a3a88"
 plugins:
   - source: github:quartz-community/created-modified-date
     enabled: true

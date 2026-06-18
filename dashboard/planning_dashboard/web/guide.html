@@ -4,34 +4,41 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Planning for Nature Toolkit — Gloucestershire Wildlife Trust</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;1,400&family=Rubik:ital,wght@0,400;0,500;0,700;1,400&display=swap" />
   <style>
     :root{
-      --green:#2d6a2d; --green-dark:#1f4d1f; --ink:#23311f; --muted:#5d6b56;
-      --bg:#ffffff; --cream:#f3efe4; --cream-2:#ece6d6; --border:#d9d4c4;
-      --link:#1f6b3a; --maxw:760px;
+      /* GWT Neighbourhood Nature palette */
+      --kelp:#058295; --kelp-dark:#046271; --fly:#e9511d;
+      --manilla:#f7ecdf;
+      --green:#058295; --green-dark:#046271; --ink:#2a2622; --muted:#6b6256;
+      --bg:#f7ecdf; --surface:#fffaf2; --cream:#fdf6ea; --cream-2:#efe3d2;
+      --border:#e3d6c3; --link:#058295; --maxw:760px;
     }
     *{box-sizing:border-box;}
     html{scroll-behavior:smooth;}
     body{
       margin:0; background:var(--bg); color:var(--ink);
-      font-family:"Source Sans Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+      font-family:"Rubik",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
       font-size:17px; line-height:1.6;
     }
     a{color:var(--link);}
-    a:hover{text-decoration:none;}
+    a:hover{text-decoration:none; color:var(--fly);}
 
     /* Hero */
     .guide-hero{
-      background:var(--cream); border-bottom:1px solid var(--border);
-      padding:3.5rem 1.5rem;
+      background:var(--surface); border-bottom:3px solid var(--kelp);
+      padding:3rem 1.5rem 3.25rem;
     }
     .guide-hero .titles{max-width:760px; margin:0 auto;}
+    .guide-hero .guide-logo{height:54px; width:auto; display:block; margin:0 0 1.4rem;}
     .guide-hero .eyebrow{
       text-transform:uppercase; letter-spacing:.14em; font-size:.72rem;
-      font-weight:700; color:var(--green); margin:0 0 .7rem;
+      font-weight:600; color:var(--kelp); margin:0 0 .7rem;
     }
     .guide-hero h1{
-      font-family:"Schibsted Grotesk",Georgia,serif;
+      font-family:"Bitter",Georgia,serif;
       font-size:2.8rem; line-height:1.05; margin:0 0 .8rem; color:var(--green-dark);
     }
     .guide-hero .lede{font-size:1.2rem; color:var(--ink); margin:0 0 1rem; max-width:34em;}
@@ -74,7 +81,7 @@
     }
     .guide-article section:first-child{border-top:0; padding-top:0;}
     .guide-article h2{
-      font-family:"Schibsted Grotesk",Georgia,serif;
+      font-family:"Bitter",Georgia,serif;
       font-size:1.9rem; color:var(--green-dark); line-height:1.15;
       margin:.2rem 0 1rem;
     }
@@ -136,10 +143,11 @@
 
   <header class="guide-hero">
     <div class="titles">
-      <p class="eyebrow">Gloucestershire Wildlife Trust</p>
+      <img class="guide-logo" src="/assets/gwt-logo.png" alt="Gloucestershire Wildlife Trust" />
+      <p class="eyebrow">Neighbourhood Nature</p>
       <h1>Planning for Nature Toolkit</h1>
       <p class="lede">What you and your community can do to support nature locally</p>
-      <p class="project">A Neighbourhood Nature Project</p>
+      <p class="project">A Neighbourhood Nature project by Gloucestershire Wildlife Trust</p>
     </div>
   </header>
 
@@ -250,7 +258,7 @@
 
       <section id="neighbourhood-planning">
         <h2>Neighbourhood/community level planning</h2>
-        <p>Parish councils must produce a Neighbourhood Development Plan (NDP) which can include good policies for nature (see more about this below). Gloucestershire Wildlife Trust can support in developing a Plan, and we have included suggestions for key policies further down.</p>
+        <p>Parish and town councils can choose to prepare a Neighbourhood Development Plan (NDP), and where they do, it can be a powerful way to shape development and support nature locally. An NDP can include good policies for nature (see more about this below). Gloucestershire Wildlife Trust can support in developing a Plan, and we have included suggestions for key policies further down.</p>
         <p>Biodiversity Action Plans are also another plan that parish councils can develop. These plans allow these authorities to develop a plan of how they will help with nature’s recovery. However, Biodiversity Action Plans are not a statutory document, but rather an effective template to ensure that councils are delivering against a biodiversity duty.</p>
         <p>Parish councils can also feed into Local Plan consultations, especially as they will have a more in depth understanding of their specific local area.</p>
         <p>Councils are also in a good position to create community groups to bring together people who want to work on projects that support nature in their local area.</p>
@@ -334,7 +342,7 @@
         </ul>
         <p>Breaching the rules of the Wildlife and Countryside Act would include any deliberate or inadvertent attempt to kill, disperse, capture, injure, harm or disturb considered endangered species, as well as any form of interference on their carcasses, eggs, habitats, nests or roosts.</p>
         <p>The Act is enforced by the UK government. It prevents developers and anyone else posing any potential harm to present listed wild plants and animals.</p>
-        <h3>The Conservation of Habitats and Species Regulations 2010 (as amended)</h3>
+        <h3>The Conservation of Habitats and Species Regulations 2017 (as amended)</h3>
         <h3>The Countryside and Rights of Way Act (Crow Act 2000 (as amended)</h3>
         <h3>The Environment Act 2021</h3>
         <p>The 2021 Environment Act has become the UK’s new framework for environmental protection. The Act set clear statutory targets for nature’s recovery under 4 priority areas:</p>

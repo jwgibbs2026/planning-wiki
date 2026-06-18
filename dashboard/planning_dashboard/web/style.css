@@ -1,24 +1,27 @@
 :root {
-  --bg: #f7f7f5;
-  --ink: #222;
-  --muted: #6b6b6b;
-  --accent: #2e7d32;
-  --border: #d9d9d4;
+  /* GWT Neighbourhood Nature palette */
+  --bg: #f7ecdf;        /* Manilla base */
+  --surface: #fffaf2;
+  --ink: #2a2622;
+  --muted: #6b6256;
+  --accent: #058295;    /* Kelp */
+  --fly: #e9511d;       /* Fly Agaric */
+  --border: #e3d6c3;
 }
 
 * { box-sizing: border-box; }
-html, body { height: 100%; margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color: var(--ink); }
+html, body { height: 100%; margin: 0; font-family: "Rubik", system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color: var(--ink); background: var(--bg); }
 /* Column layout: injected top nav bar, then the sidebar+map row fills the rest. */
 body { display: flex; flex-direction: column; }
 #content-row { display: flex; flex: 1; min-height: 0; }
 
 #sidebar {
   width: 320px; min-width: 320px; height: 100%; overflow-y: auto;
-  background: var(--bg); border-right: 1px solid var(--border); padding: 16px 18px;
+  background: var(--surface); border-right: 1px solid var(--border); padding: 16px 18px;
 }
 #map { flex: 1; height: 100%; }
 
-h1 { font-size: 1.2rem; margin: 0 0 4px; }
+h1 { font-family: "Bitter", Georgia, serif; font-size: 1.3rem; margin: 0 0 4px; color: var(--accent); }
 h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 16px 0 8px; }
 .muted { color: var(--muted); font-size: 0.82rem; line-height: 1.4; }
 

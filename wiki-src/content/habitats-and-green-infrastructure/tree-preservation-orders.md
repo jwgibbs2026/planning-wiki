@@ -61,4 +61,4 @@ Carrying out works to a TPO tree without consent, or failing to comply with cond
 All six Gloucestershire LPAs maintain registers of TPO trees. Significant trees — particularly ancient oaks, veteran field trees, and mature street trees — are commonly protected. TPO registers can be searched through each council's online planning portal or by contacting the council's arboriculture or tree officer.
 
 ## Related
-[[Ancient Woodland in Planning]] · [[Ancient and Veteran Trees]] · [[Local Planning Authority]] · [[Green Infrastructure]] · [[Planning Application]] · [[NPPF]] · [[Conservation of Habitats and Species Regulations 2010]]
+[[Ancient Woodland in Planning]] · [[Ancient and Veteran Trees]] · [[Local Planning Authority]] · [[Green Infrastructure]] · [[Planning Application]] · [[NPPF]] · [[Conservation of Habitats and Species Regulations 2017]]

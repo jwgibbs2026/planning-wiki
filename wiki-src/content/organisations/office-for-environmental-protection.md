@@ -35,4 +35,4 @@ The OEP is a last-resort mechanism — complainants must first exhaust available
 The OEP cannot investigate decisions by local planning authorities on individual planning applications (that is the role of the courts). It focuses on systemic failures by public bodies to comply with environmental law.
 
 ## Related
-[[Environment Act 2021]] · [[Biodiversity Duty]] · [[SSSI]] · [[Local Planning Authority]] · [[Conservation of Habitats and Species Regulations 2010]] · [[Natural England]]
+[[Environment Act 2021]] · [[Biodiversity Duty]] · [[SSSI]] · [[Local Planning Authority]] · [[Conservation of Habitats and Species Regulations 2017]] · [[Natural England]]

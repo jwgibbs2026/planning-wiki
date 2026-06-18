@@ -50,4 +50,4 @@ Natural England's existing Nutrient Mitigation Scheme (which sold individual nut
 The Severn Estuary is a SAC, SPA, and Ramsar site — qualifying features include estuarine habitats and migratory/overwintering birds. Development in Gloucestershire that discharges (directly or via combined sewers) to the Severn catchment may be subject to nutrient neutrality requirements, depending on the catchment boundary and the sensitivity of the affected site. LPAs check affected postcode areas; developers should check with the relevant LPA and Natural England early in the process.
 
 ## Related
-[[habitats-regulations-assessment]] · [[Nature Restoration Fund]] · [[Conservation of Habitats and Species Regulations 2010]] · [[Natural England]] · [[SSSI]] · [[Flooding and Natural Flood Management]] · [[Local Planning Authority]] · [[Planning Application]]
+[[habitats-regulations-assessment]] · [[Nature Restoration Fund]] · [[Conservation of Habitats and Species Regulations 2017]] · [[Natural England]] · [[SSSI]] · [[Flooding and Natural Flood Management]] · [[Local Planning Authority]] · [[Planning Application]]

@@ -25,7 +25,7 @@ This is Natural England's standing advice for local planning authorities (LPAs) 
 
 ## Key findings
 
-**Legal status**: Hazel dormice are European Protected Species (EPS) under the Conservation of Habitats and Species Regulations 2010 (2017 consolidation) and additionally protected under the Wildlife and Countryside Act 1981. They are also listed as a [[Species of Principal Importance]] under the NERC Act 2006 and are classified as Vulnerable on England's Red List for Mammals.
+**Legal status**: Hazel dormice are European Protected Species (EPS) under the Conservation of Habitats and Species Regulations 2017 (2017 consolidation) and additionally protected under the Wildlife and Countryside Act 1981. They are also listed as a [[Species of Principal Importance]] under the NERC Act 2006 and are classified as Vulnerable on England's Red List for Mammals.
 
 **Survey triggers**: An ecological survey is required when historical records or distribution data suggest dormice presence, or when development affects woodland, hedgerow, or scrub habitat. The habitat-based trigger is relatively broad — the presence of suitable habitat alone is sufficient.
 

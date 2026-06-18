@@ -43,7 +43,7 @@ Use the sections below to explore, or search for a specific topic using the sear
 [[Planning System Overview]] · [[Planning Application]] · [[Planning Hierarchy]] · [[Planning Appeals]] · [[Neighbourhood Development Plan]] · [[Getting Involved in Planning]] · [[Tips for Responding to Planning Applications]] · [[Community Infrastructure Levy]] · [[Planning Obligations]] · [[Village Design Statements]] · [[Parish Council]]
 
 ### Legislation & Policy
-[[NPPF]] · [[Environment Act 2021]] · [[Wildlife and Countryside Act 1981]] · [[Local Plan]] · [[Conservation of Habitats and Species Regulations 2010]] · [[Habitats Regulations Assessment]] · [[Conservation Covenants]] · [[EPS Mitigation Licence]] · [[Seek to Further Duty]] · [[Sandford Principle]] · [[Major Development in AONBs]]
+[[NPPF]] · [[Environment Act 2021]] · [[Wildlife and Countryside Act 1981]] · [[Local Plan]] · [[Conservation of Habitats and Species Regulations 2017]] · [[Habitats Regulations Assessment]] · [[Conservation Covenants]] · [[EPS Mitigation Licence]] · [[Seek to Further Duty]] · [[Sandford Principle]] · [[Major Development in AONBs]]
 
 ### Biodiversity & Nature Recovery
 [[Biodiversity Net Gain]] · [[Biodiversity Metric]] · [[Biodiversity Gain Plan]] · [[Local Nature Recovery Strategy]] · [[Nature Restoration Fund]] · [[Nature Recovery Network]] · [[30x30 Commitment]] · [[Ecological Impact Assessment]] · [[Environmental Impact Assessment]] · [[Agri-environment Schemes]] · [[Species of Principal Importance]] · [[SSSI]] · [[Local Wildlife Sites]] · [[Nutrient Neutrality]]

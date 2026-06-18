@@ -20,7 +20,7 @@ Section 41 of the NERC Act 2006 requires the Secretary of State to publish a lis
 
 The S41 list is a material consideration in planning decisions. Where a development proposal would affect S41 species or their habitats, LPAs must take this into account when determining applications.
 
-S41 status operates alongside — and independently of — the legal protections under the Wildlife and Countryside Act 1981, the Conservation of Habitats and Species Regulations 2010, and the Protection of Badgers Act 1992.
+S41 status operates alongside — and independently of — the legal protections under the Wildlife and Countryside Act 1981, the Conservation of Habitats and Species Regulations 2017, and the Protection of Badgers Act 1992.
 
 ---
 

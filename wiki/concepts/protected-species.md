@@ -20,7 +20,7 @@ Protected species in England fall under three distinct legal frameworks. Underst
 
 ### 1. European Protected Species (EPS) — Habitats Regulations
 
-The highest level of protection, derived from the EU Habitats Directive and retained in domestic law through the Conservation of Habitats and Species Regulations 2010 (as amended 2017). Species listed in Schedule 2 of those Regulations receive EPS status. It is illegal to kill, injure, disturb, or destroy the habitats of EPS — even when the animals are not present.
+The highest level of protection, derived from the EU Habitats Directive and retained in domestic law through the Conservation of Habitats and Species Regulations 2017 (as amended 2017). Species listed in Schedule 2 of those Regulations receive EPS status. It is illegal to kill, injure, disturb, or destroy the habitats of EPS — even when the animals are not present.
 
 A **three-part derogation test** must be satisfied before a licence can be granted:
 1. No satisfactory alternative exists
@@ -147,7 +147,7 @@ Gloucestershire Centre for Environmental Records (GCER) is the county repository
 - **Badgers** — [[Badgers in Planning]]
 - **Wild birds** — [[Wild Birds in Planning]], [[Barn Owls in Planning]], [[Swifts in Planning]]
 - **Multi-species scenarios** — [[Barn Conversions and Wildlife]]
-- **Legislation** — [[European Protected Species]], Conservation of Habitats and Species Regulations 2010, Wildlife and Countryside Act 1981, [[Species of Principal Importance]]
+- **Legislation** — [[European Protected Species]], Conservation of Habitats and Species Regulations 2017, Wildlife and Countryside Act 1981, [[Species of Principal Importance]]
 
 ---
 
@@ -164,7 +164,7 @@ Gloucestershire Centre for Environmental Records (GCER) is the county repository
 - [[EPS Mitigation Licence]]
 - [[Bat Surveys]]
 - [[Species of Principal Importance]]
-- [[Conservation of Habitats and Species Regulations 2010]]
+- [[Conservation of Habitats and Species Regulations 2017]]
 - [[Wildlife and Countryside Act 1981]]
 - [[Protection of Badgers Act 1992]]
 - [[Natural England]]

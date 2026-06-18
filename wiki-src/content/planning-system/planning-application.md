@@ -28,7 +28,7 @@ When commenting, refer to:
 - [[NPPF]] policies on biodiversity and environment
 - Local Plan policies for the area
 - Neighbourhood Development Plan policies if one exists
-- Relevant wildlife legislation (see Wildlife and Countryside Act 1981, Conservation of Habitats and Species Regulations 2010)
+- Relevant wildlife legislation (see Wildlife and Countryside Act 1981, Conservation of Habitats and Species Regulations 2017)
 
 > Focus on protected species and designated habitats rather than common species. Comments about protected species carry more legal weight.
 

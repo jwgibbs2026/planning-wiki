@@ -15,7 +15,7 @@ When a development near water could affect otters, [[Natural England]] sets out 
 
 ## How otters are protected
 
-Otters are a [[European Protected Species]] under the Conservation of Habitats and Species Regulations 2010. It is an offence to kill, injure, capture, or disturb them, or to damage or destroy the places they breed and rest. They get extra protection under the [[Wildlife and Countryside Act 1981]], and because they are a [[Species of Principal Importance]] they remain a planning consideration even where a licence isn't needed.
+Otters are a [[European Protected Species]] under the Conservation of Habitats and Species Regulations 2017. It is an offence to kill, injure, capture, or disturb them, or to damage or destroy the places they breed and rest. They get extra protection under the [[Wildlife and Countryside Act 1981]], and because they are a [[Species of Principal Importance]] they remain a planning consideration even where a licence isn't needed.
 
 ## When a survey is needed
 

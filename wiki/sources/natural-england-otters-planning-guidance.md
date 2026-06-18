@@ -27,7 +27,7 @@ The guidance follows the same procedural structure as Natural England's standing
 
 ## Legal Status of Otters
 
-Otters are European Protected Species under the Conservation of Habitats and Species Regulations 2010 (2017 consolidation). Key prohibitions cover deliberately killing, injuring, disturbing, or capturing otters; damaging or destroying breeding sites and resting places; and possessing, transporting, or selling them or their remains.
+Otters are European Protected Species under the Conservation of Habitats and Species Regulations 2017 (2017 consolidation). Key prohibitions cover deliberately killing, injuring, disturbing, or capturing otters; damaging or destroying breeding sites and resting places; and possessing, transporting, or selling them or their remains.
 
 Additional protection applies under the Wildlife and Countryside Act 1981. Otters are also listed as a [[Species of Principal Importance]] under the Natural Environment and Rural Communities Act 2006 (S41 list), making them a material consideration in planning decisions even where EPS licensing is not triggered.
 

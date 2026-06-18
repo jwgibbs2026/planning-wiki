@@ -20,7 +20,7 @@ Natural England's standing advice on hazel dormice is a material consideration i
 
 Hazel dormice receive protection under two overlapping legal frameworks:
 
-**Conservation of Habitats and Species Regulations 2010** (2017 consolidation — the operative instrument): As EPS, it is an offence to:
+**Conservation of Habitats and Species Regulations 2017** (2017 consolidation — the operative instrument): As EPS, it is an offence to:
 - Deliberately kill, injure, disturb, or capture dormice
 - Damage or destroy breeding sites or resting places
 - Possess, transport, sell, or offer dormice for sale (dead or alive)

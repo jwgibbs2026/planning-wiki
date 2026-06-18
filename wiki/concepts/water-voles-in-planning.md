@@ -25,7 +25,7 @@ Water voles are protected under the **Wildlife and Countryside Act 1981** (WCA 1
 
 ### Important distinction: WCA 1981, not EPS
 
-Water voles are **not** European Protected Species (EPS) under the Conservation of Habitats and Species Regulations 2010. This is a critical legal distinction:
+Water voles are **not** European Protected Species (EPS) under the Conservation of Habitats and Species Regulations 2017. This is a critical legal distinction:
 
 - The **three-part derogation test** (no satisfactory alternative, imperative reasons of overriding public interest, favourable conservation status) that applies to bats, great crested newts, and otters does **not** apply to water voles
 - Water voles use a **standard mitigation licence** rather than an EPS mitigation licence

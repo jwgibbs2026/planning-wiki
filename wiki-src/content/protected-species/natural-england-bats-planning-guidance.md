@@ -5,7 +5,7 @@ type: concept
 created: 2026-06-10
 updated: 2026-06-10
 tags: [bats, protected-species, EPS, planning, natural-england, standing-advice]
-related: ["bats-in-planning", "european-protected-species", "eps-mitigation-licence", "bat-surveys", "dark-corridors", "conservation-of-habitats-and-species-regulations-2010", "local-planning-authority", "biodiversity-net-gain", "green-infrastructure"]
+related: ["bats-in-planning", "european-protected-species", "eps-mitigation-licence", "bat-surveys", "dark-corridors", "conservation-of-habitats-and-species-regulations-2017", "local-planning-authority", "biodiversity-net-gain", "green-infrastructure"]
 sources: ["Natural England - Bats Planning Guidance.md"]
 ---
 
@@ -15,7 +15,7 @@ When a development could affect bats, [[Natural England]]'s standing advice tell
 
 ## How bats are protected
 
-Every bat species is a [[European Protected Species]] under the [[Conservation of Habitats and Species Regulations 2010]] — the strongest wildlife protection there is in England. It is an offence to kill, injure, disturb, or capture a bat, or to damage or destroy a roost, even when the roost is empty. Several bats are also a [[Species of Principal Importance]].
+Every bat species is a [[European Protected Species]] under the [[Conservation of Habitats and Species Regulations 2017]] — the strongest wildlife protection there is in England. It is an offence to kill, injure, disturb, or capture a bat, or to damage or destroy a roost, even when the roost is empty. Several bats are also a [[Species of Principal Importance]].
 
 ## When a survey is needed
 
@@ -39,4 +39,4 @@ Bats are the protected species most often met in Gloucestershire applications: t
 
 ## Related
 
-[[Bats in Planning]] · [[European Protected Species]] · [[EPS Mitigation Licence]] · [[Bat Surveys]] · [[Dark Corridors]] · [[Protected Species]] · [[Conservation of Habitats and Species Regulations 2010]] · [[Natural England]] · [[Local Planning Authority]] · [[Green Infrastructure]] · [[Local Nature Recovery Strategy]]
+[[Bats in Planning]] · [[European Protected Species]] · [[EPS Mitigation Licence]] · [[Bat Surveys]] · [[Dark Corridors]] · [[Protected Species]] · [[Conservation of Habitats and Species Regulations 2017]] · [[Natural England]] · [[Local Planning Authority]] · [[Green Infrastructure]] · [[Local Nature Recovery Strategy]]

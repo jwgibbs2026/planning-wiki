@@ -5,7 +5,7 @@ title: "Natural England - Bats Planning Guidance"
 created: 2026-06-10
 updated: 2026-06-10
 tags: [bats, protected-species, EPS, planning, natural-england, standing-advice]
-related: ["bats-in-planning", "european-protected-species", "eps-mitigation-licence", "bat-surveys", "dark-corridors", "conservation-of-habitats-and-species-regulations-2010", "local-planning-authority", "biodiversity-net-gain", "green-infrastructure"]
+related: ["bats-in-planning", "european-protected-species", "eps-mitigation-licence", "bat-surveys", "dark-corridors", "conservation-of-habitats-and-species-regulations-2017", "local-planning-authority", "biodiversity-net-gain", "green-infrastructure"]
 sources: ["Natural England - Bats Planning Guidance.md"]
 ---
 
@@ -73,7 +73,7 @@ Communities and parish councils can use this guidance to challenge planning appl
 - [[Bat Surveys]]
 - [[Dark Corridors]]
 - [[Protected Species]]
-- [[Conservation of Habitats and Species Regulations 2010]]
+- [[Conservation of Habitats and Species Regulations 2017]]
 - [[Natural England]]
 - [[Local Planning Authority]]
 - [[Green Infrastructure]]

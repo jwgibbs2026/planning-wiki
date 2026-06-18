@@ -18,7 +18,7 @@ Otters are one of the most legally protected mammals in England and one of the t
 
 Otters hold the highest tier of legal protection available in England:
 
-- **European Protected Species** under the Conservation of Habitats and Species Regulations 2010 (2017 consolidation) — prohibitions on deliberate killing, injury, disturbance, capture, and destruction of breeding sites and resting places
+- **European Protected Species** under the Conservation of Habitats and Species Regulations 2017 (2017 consolidation) — prohibitions on deliberate killing, injury, disturbance, capture, and destruction of breeding sites and resting places
 - **Wildlife and Countryside Act 1981** — additional domestic protection
 - **Species of Principal Importance** (S41 list) under the Natural Environment and Rural Communities Act 2006 — a material consideration in planning decisions even where EPS licensing is not triggered
 

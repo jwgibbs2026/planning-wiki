@@ -21,7 +21,7 @@ Barn owls are protected under the Wildlife and Countryside Act 1981:
 - It is an offence to damage or destroy a nest in use or being built
 - It is an offence to take or destroy barn owl eggs
 
-Barn owls are **not** European Protected Species and are not covered by the Conservation of Habitats and Species Regulations 2010. There is no development licence available for barn owl harm — see [[Wild Birds in Planning]] for the critical no-licence rule.
+Barn owls are **not** European Protected Species and are not covered by the Conservation of Habitats and Species Regulations 2017. There is no development licence available for barn owl harm — see [[Wild Birds in Planning]] for the critical no-licence rule.
 
 Barn owls are listed as a [[Species of Principal Importance]] (S41 species), making their presence a material planning consideration.
 

@@ -10,7 +10,7 @@ sources: ["Natural England - Badgers Planning Guidance.md"]
 
 # Protection of Badgers Act 1992
 
-The Protection of Badgers Act 1992 is the primary legislation protecting badgers and their setts in England, Scotland, and Wales. It is a **dedicated Act** for a single species group — structurally distinct from the broader wildlife protection framework of the Wildlife and Countryside Act 1981 and the European Protected Species (EPS) framework under the Conservation of Habitats and Species Regulations 2010.
+The Protection of Badgers Act 1992 is the primary legislation protecting badgers and their setts in England, Scotland, and Wales. It is a **dedicated Act** for a single species group — structurally distinct from the broader wildlife protection framework of the Wildlife and Countryside Act 1981 and the European Protected Species (EPS) framework under the Conservation of Habitats and Species Regulations 2017.
 
 ---
 
@@ -74,7 +74,7 @@ The Protection of Badgers Act 1992 applies across all six Gloucestershire distri
 ## Related
 - [[Badgers in Planning]]
 - [[Wildlife and Countryside Act 1981]]
-- [[Conservation of Habitats and Species Regulations 2010]]
+- [[Conservation of Habitats and Species Regulations 2017]]
 - [[EPS Mitigation Licence]]
 - [[Natural England]]
 - [[Protected Species]]

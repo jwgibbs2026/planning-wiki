@@ -9,7 +9,7 @@ sources: []
 
 Rodborough Common Special Area of Conservation (SAC) is an internationally designated area of unimproved [[Calcareous and Neutral Grassland|calcareous grassland]] on the Cotswold escarpment above Stroud. It is designated for its semi-natural dry grasslands and scrubland on limestone (Festuco-Brometalia), which support a rich assemblage of orchids and invertebrates, including the large blue butterfly.
 
-As a SAC it is protected under the [[Conservation of Habitats and Species Regulations 2010]]. The principal planning pressures are recreational disturbance and nutrient/air-quality effects from nearby development, so housing growth around Stroud can trigger a [[Habitats Regulations Assessment]] and mitigation (such as contributions to visitor management). The common is grazed to maintain its grassland condition.
+As a SAC it is protected under the [[Conservation of Habitats and Species Regulations 2017]]. The principal planning pressures are recreational disturbance and nutrient/air-quality effects from nearby development, so housing growth around Stroud can trigger a [[Habitats Regulations Assessment]] and mitigation (such as contributions to visitor management). The common is grazed to maintain its grassland condition.
 
 ## Gloucestershire Context
 
