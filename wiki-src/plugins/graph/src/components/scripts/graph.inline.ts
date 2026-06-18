@@ -117,6 +117,8 @@ import {
       var colorGroups = config.colorGroups || {};
       var groupForce = config.groupForce || 0;
       var removeOrphans = config.removeOrphans;
+      var groupRadius = config.groupRadius || 0.34;
+      var groupLabels = config.groupLabels || {};
 
       function topFolder(id) {
         var i = id.indexOf("/");
@@ -298,6 +300,27 @@ import {
 
       graph.appendChild(app.canvas);
 
+      // Colour key — only on the full-screen global graph, where there's room.
+      if (graph.classList.contains("global-graph-container") && Object.keys(colorGroups).length) {
+        var legend = document.createElement("div");
+        legend.className = "graph-legend";
+        var legendKeys = Object.keys(colorGroups);
+        for (var li = 0; li < legendKeys.length; li++) {
+          var lk = legendKeys[li];
+          var row = document.createElement("div");
+          row.className = "graph-legend-item";
+          var sw = document.createElement("span");
+          sw.className = "graph-legend-swatch";
+          sw.style.backgroundColor = groupColors[lk] || gray;
+          var lbl = document.createElement("span");
+          lbl.textContent = groupLabels[lk] || lk;
+          row.appendChild(sw);
+          row.appendChild(lbl);
+          legend.appendChild(row);
+        }
+        graph.appendChild(legend);
+      }
+
       var stage = new PIXI.Container();
       app.stage.addChild(stage);
 
@@ -332,7 +355,7 @@ import {
       // Glossary) are pulled firmly to the centre so everything orbits them.
       if (groupForce > 0) {
         var groupList = Object.keys(colorGroups);
-        var anchorRadius = Math.min(width, height) * 0.34;
+        var anchorRadius = Math.min(width, height) * groupRadius;
         var groupAnchors = {};
         for (var i = 0; i < groupList.length; i++) {
           var angle = (i / groupList.length) * 2 * Math.PI - Math.PI / 2;

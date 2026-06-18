@@ -24,6 +24,10 @@ interface D3Config {
     colorGroups?: Record<string, string>;
     /** Pull same-group nodes toward a shared anchor (0 = off). Creates group clusters. */
     groupForce?: number;
+    /** Radius of the group-anchor ring, as a fraction of the smaller canvas side. */
+    groupRadius?: number;
+    /** Human-readable labels for the colour-key legend, keyed by folder slug. */
+    groupLabels?: Record<string, string>;
     /** Remove nodes with no edges (keeps the current page). */
     removeOrphans?: boolean;
 }

@@ -114,14 +114,16 @@ plugins:
       localGraph:
         showTags: false
         depth: 2
-        repelForce: 0.6
-        centerForce: 0.45
-        linkDistance: 32
+        repelForce: 0.5
+        centerForce: 0.05
+        linkDistance: 24
         fontSize: 0.32
-        scale: 1.1
+        scale: 1.0
         showArrow: true
         nodeSizeMultiplier: 1.2
         removeOrphans: true
+        groupForce: 0.5
+        groupRadius: 0.4
         excludePrefixes:
           - "tags/"
         colorGroups: &graphColors
@@ -138,18 +140,29 @@ plugins:
         showTags: false
         depth: -1
         enableRadial: false
-        repelForce: 0.55
+        repelForce: 0.5
         centerForce: 0.05
-        linkDistance: 28
+        linkDistance: 22
         fontSize: 0.3
-        scale: 1.0
+        scale: 0.8
         showArrow: true
         nodeSizeMultiplier: 1.2
-        groupForce: 0.35
+        groupForce: 0.55
+        groupRadius: 0.46
         removeOrphans: true
         excludePrefixes:
           - "tags/"
         colorGroups: *graphColors
+        groupLabels:
+          biodiversity-and-nature-recovery: "Biodiversity & Nature Recovery"
+          habitats-and-green-infrastructure: "Habitats & Green Infrastructure"
+          protected-species: "Protected Species"
+          protected-landscapes: "Protected Landscapes"
+          designated-sites: "Designated Sites"
+          legislation-and-policy: "Legislation & Policy"
+          planning-system: "Planning System"
+          organisations: "Organisations"
+          gloucestershire: "Gloucestershire"
     layout:
       position: right
       priority: 10

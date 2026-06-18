@@ -66,6 +66,38 @@
       @media all and (max-width: 800px) {
         width: 90%;
       }
+
+      & > .graph-legend {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        z-index: 5;
+        max-height: calc(100% - 2rem);
+        overflow-y: auto;
+        padding: 0.6rem 0.8rem;
+        border: 1px solid var(--lightgray);
+        border-radius: 6px;
+        background-color: var(--light);
+        opacity: 0.95;
+        font-size: 0.78rem;
+        line-height: 1.4;
+        color: var(--darkgray);
+
+        & > .graph-legend-item {
+          display: flex;
+          align-items: center;
+          gap: 0.45rem;
+          white-space: nowrap;
+
+          & > .graph-legend-swatch {
+            width: 0.7rem;
+            height: 0.7rem;
+            flex: 0 0 auto;
+            border-radius: 50%;
+            display: inline-block;
+          }
+        }
+      }
     }
   }
 }
