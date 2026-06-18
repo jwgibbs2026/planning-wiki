@@ -525,7 +525,10 @@ import {
         var gfx = new PIXI.Graphics();
         gfx.circle(0, 0, radius);
         gfx.fill({ color: isTagNode ? light : color });
-        if (isTagNode) {
+        if (nodeId === slug) {
+          // Mark the current page so the user can see where they are.
+          gfx.stroke({ width: 3, color: "#ffffff" });
+        } else if (isTagNode) {
           gfx.stroke({ width: 2, color: tertiary });
         }
 

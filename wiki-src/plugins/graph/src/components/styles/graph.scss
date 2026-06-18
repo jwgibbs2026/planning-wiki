@@ -74,14 +74,14 @@
         z-index: 5;
         max-height: calc(100% - 2rem);
         overflow-y: auto;
-        padding: 0.6rem 0.8rem;
+        padding: 0.7rem 0.9rem;
         border: 1px solid var(--lightgray);
-        border-radius: 6px;
-        background-color: var(--light);
-        opacity: 0.95;
+        border-radius: 8px;
+        background-color: var(--lightgray);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
         font-size: 0.78rem;
-        line-height: 1.4;
-        color: var(--darkgray);
+        line-height: 1.5;
+        color: var(--dark);
 
         & > .graph-legend-item {
           display: flex;
